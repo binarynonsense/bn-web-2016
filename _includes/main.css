@@ -301,7 +301,7 @@ h3 {
 h4 {
   font-size: 1.6rem;
 }
-a {
+a, a:visited {
   color: gray;
   text-decoration: underline;
 }
