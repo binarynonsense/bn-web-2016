@@ -33,7 +33,8 @@ audio:not([controls]) {
   display: none;
   height: 0;
 }
-a {
+a, a:visited {
+    color: gray;
   background-color: transparent;
 }
 a:active,
