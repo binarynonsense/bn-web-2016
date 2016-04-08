@@ -224,36 +224,7 @@ pre {
 .clearfix:after {
   clear: both;
 }
-.animated {
-  -webkit-animation: fade-in-down 0.6s;
-          animation: fade-in-down 0.6s;
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
-}
-@-webkit-keyframes fade-in-down {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-@keyframes fade-in-down {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
+
 .home,
 .blog,
 .projects {
@@ -305,8 +276,6 @@ pre {
   margin: 0;
   width: 75%;
   font-weight: 500;
-  -webkit-transition: all ease-in-out 0.2s;
-          transition: all ease-in-out 0.2s;
 }
 .home > .list > .item:hover > .url > .title,
 .blog > .list > .item:hover > .url > .title,
@@ -324,8 +293,6 @@ pre {
   font-weight: 300;
   color: #aaa;
   text-align: right;
-  -webkit-transition: all ease-in-out 0.2s;
-          transition: all ease-in-out 0.2s;
 }
 .home > .list .item:hover .url aside,
 .blog > .list .item:hover .url aside,
@@ -455,8 +422,6 @@ pre {
   margin: 0;
   width: 75%;
   font-weight: 400;
-  -webkit-transition: all ease-in-out 0.2s;
-          transition: all ease-in-out 0.2s;
   font-size: 1.6rem;
 }
 .tag-list > .list > .item:hover > .url > .title {
@@ -471,8 +436,6 @@ pre {
   font-weight: 300;
   color: #aaa;
   text-align: right;
-  -webkit-transition: all ease-in-out 0.2s;
-          transition: all ease-in-out 0.2s;
   font-size: 1.6rem;
 }
 .tag-list > .list .item:hover .url aside {
@@ -601,8 +564,6 @@ pre {
 .footer-main > .link > .icon {
   width: 15px !important;
   fill: #aaa !important;
-  -webkit-transition: ease-in-out all 0.3s;
-          transition: ease-in-out all 0.3s;
   position: relative;
   top: 3px;
   display: inherit;
@@ -619,8 +580,6 @@ pre {
   color: #222;
   text-decoration: none;
   border-bottom: 1px solid transparent;
-  -webkit-transition: ease-in-out all 0.3s;
-          transition: ease-in-out all 0.3s;
   padding-bottom: 1px;
 }
 .footer-main > .extra > .link:hover {
