@@ -920,7 +920,6 @@ pre {
   text-decoration: none;
   position: relative;
   display: inline-block;
-  height: 40px;
-  width:40px;
-  font-size: 35px;
+  width: 45px;
+  font-size: 40px;
 }
