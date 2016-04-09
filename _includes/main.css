@@ -624,7 +624,7 @@ pre {
 .nav > .list > .item > .link,
 .nav-home > .list > .item > .link {
   display: inline-block;
-  font-weight: 500;
+  font-weight: 300;
   font-size: 1.4rem;
   padding: 20px 10px;
   text-decoration: none;
