@@ -40,6 +40,7 @@ a, a:visited {
 a:active,
 a:hover {
   outline: 0;
+  text-decoration: underline;
 }
 h1 {
   font-size: 2em;
