@@ -629,7 +629,6 @@ pre {
   text-decoration: none;
 }
 .nav {
-
   text-align: center;
 }
 .nav > .list {
@@ -637,7 +636,7 @@ pre {
 }
 .nav > .list > .item > .link {
   font-size: 1.4rem;
-  padding: 20px 10px;
+  padding: 5px 10px;
 }
 .nav-home {
   margin-top: 40px;
