@@ -12,7 +12,7 @@ layout: compress
     <meta name=description content="{{ site.bio }}">
     <meta name=author content="{{ site.name }}">
 
-    <title>{{ site.name }} &middot; {{ page.title }}</title>
+    <title>{% if page.title != "Home" %}{{ page.title }} | {% endif %}Binary Nonsense | Website and Portfolio of Álvaro García</title>
 
     <!-- Jekyll Plugin -->
     {% seo %}
