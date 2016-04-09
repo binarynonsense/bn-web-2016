@@ -632,6 +632,7 @@ pre {
   position: absolute;
   right: 0;
   top: 0;
+  text-align: center;
 }
 .nav > .list {
   padding: 0 13px 0;
