@@ -9,4 +9,4 @@ permalink: /about/index.html
 
 <h2>Contact</h2>
 
-<p><img src="./portfolio/img/mail.png"/ style="backgroud-color: #eee"></p>
+<p><img src="./portfolio/img/mail.png" style="backgroud-color: #eee"></p>
