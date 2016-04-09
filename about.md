@@ -3,7 +3,7 @@ title: About
 layout: page
 permalink: /about/index.html
 ---
-<p><img src="../assets/images/logo.png" width="150px"></p>
+<p style="margin-top=100px;"><img src="../assets/images/logo.png" width="150px"></p>
 
 <h2>About:</h2>
 
