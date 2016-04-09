@@ -13,6 +13,7 @@ permalink: /about/index.html
 
 <p><img src="../assets/images/mail.png"></p>
 
+<header>
 <div class="social-links">
 
         <a class="link" data-title="twitter.com/binarynonsense" href="http://twitter.com/binarynonsense" target="_blank">
@@ -28,3 +29,4 @@ permalink: /about/index.html
         </a> 
   
 </div>
+</header>
