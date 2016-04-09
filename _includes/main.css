@@ -626,7 +626,7 @@ pre {
   font-weight: 300;
   font-size: 1.4rem;
   padding: 20px 10px;
-  text-decoration: underline;
+  text-decoration: none;
 }
 .nav {
   position: absolute;
