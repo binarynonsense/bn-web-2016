@@ -13,4 +13,3 @@ permalink: /about/index.html
 
 <p><img src="../assets/images/mail.png"></p>
 
-{% include icons.html %}
