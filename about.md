@@ -12,3 +12,5 @@ permalink: /about/index.html
 <h2>Contact:</h2>
 
 <p><img src="../assets/images/mail.png"></p>
+
+{% include icons.html %}
