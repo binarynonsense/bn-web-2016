@@ -615,7 +615,7 @@ pre {
 .nav-home > .list {
   list-style: none;
   margin: 0;
-  padding: 0 10px 0;
+  padding: 0 13px 0;
 }
 .nav > .list > .item,
 .nav-home > .list > .item {
@@ -626,7 +626,7 @@ pre {
   display: inline-block;
   font-weight: 900;
   font-size: 1.4rem;
-  padding: 10px 10px;
+  padding: 20px 10px;
   text-decoration: none;
 }
 .nav {
@@ -642,7 +642,7 @@ pre {
   padding: 20px 10px;
 }
 .nav-home {
-  margin-top: 40px;
+  margin-top: 20px;
   text-align: center;
 }
 .nav-home > .list {
