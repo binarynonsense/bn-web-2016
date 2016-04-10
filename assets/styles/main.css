@@ -270,8 +270,7 @@ html {
 }
 body {
   line-height: 1;
-  font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
-  border-top: 10px solid #ff890c;
+  font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;  
 }
 color alpha {
   -webkit-font-smoothing: antialiased;
