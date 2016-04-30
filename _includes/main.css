@@ -70,7 +70,7 @@ html {
 }
 body {
   line-height: 1;
-  font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 16px Helvetica, Arial, sans-serif;
 }
 color alpha {
   -webkit-font-smoothing: antialiased;
@@ -80,7 +80,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   color: #222;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -459,7 +459,7 @@ pre {
 }
 .author > .toright > .name {
   font-size: 1.5rem;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-weight: 500;
   margin: 6px 0 0;
 }
@@ -476,7 +476,7 @@ pre {
   }
 }
 .author > .toright > .bio {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-weight: 300;
   color: #aaa;
   font-size: 1.3rem;
