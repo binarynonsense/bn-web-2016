@@ -10,6 +10,13 @@
             <a class="link" href="http://blog.binarynonsense.com">Blog</a>
         </li>
         
+
+            {% if page.title != "Games" %}
+                <li class="item">
+                    <a class="link" href="{{ site.url }}/games">Games</a>
+                </li>
+            {% endif %}
+
         
         {% if site.projects == true %}
             {% if page.title != "Portfolio" %}
