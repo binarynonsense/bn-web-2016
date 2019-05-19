@@ -1,114 +1,165 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<title>Games | Binary Nonsense | Website of Álvaro García</title>
 
-<head>
+<meta name='author' content='Alvaro Garcia C - www.binarynonsense.com' /> 
+<meta name='description' content='Binary Nonsense - Website and Portfolio of Álvaro García' /> 
+<meta name='keywords' content='Alvaro,Garcia,portfolio,art,programming,illustration, game, gamedev' /> 
+<link rel='shortcut icon' href='../imgs/favicon.ico' type='image/x-icon'/>
+<link rel='icon' href='../imgs/favicon.ico' type='image/x-icon'/> 
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <meta name='author' content='Alvaro Garcia C  -  www.binarynonsense.com' />
-    <meta name='description' content='Binary Nonsense - Website and Portfolio of Álvaro García' />
-    <meta name='keywords' content='Alvaro,Garcia,portfolio,art,programming,illustration, game, gamedev' />
-    <link rel='shortcut icon' href='../projects/img/favicon.ico' type='image/x-icon'/><link rel='icon' href='../projects/img/favicon.ico' type='image/x-icon'/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+</style>
+<style>
+.mySlides {display:none;}
+</style>
+<body class="w3-black">
 
-    <title>Games | Binary Nonsense | Website of Álvaro García</title>
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <!-- <img src="../imgs/bn_avatar.jpg" style="width:100%"> -->
+  <a href="../" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="./" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-gamepad w3-xxlarge"></i>
+    <p>GAMES</p>
+  </a>
+  <a href="../projects" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-archive w3-xxlarge"></i>
+    <p>PROJECTS</p>
+  </a>
+   <a href="http://blog.binarynonsense.com/" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-pencil w3-xxlarge" target="_blank"></i>
+    <p>BLOG</p>
+  </a>
+  <a href="../about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>ABOUT</p>
+  </a>
+</nav>
 
-    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
-    <link href="../projects/css/bootstrap.min.css" rel="stylesheet">
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="http://www.binarynonsense.com/" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="http://www.binarynonsense.com/games" class="w3-bar-item w3-button" style="width:25% !important">GAMES</a>
+    <a href="http://www.binarynonsense.com/projects" class="w3-bar-item w3-button" style="width:25% !important">PROJECTS</a>
+    <!-- <a href="http://blog.binarynonsense.com/" target="_blank" class="w3-bar-item w3-button" style="width:25% !important">BLOG</a>  -->   
+    <a href="http://www.binarynonsense.com/about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+  </div>
+</div>
 
-    <!-- Custom CSS -->
-    <link href="../projects/css/freelancer.css" rel="stylesheet">
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
 
-    <!-- Custom Fonts -->
-    <link href="../projects/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-<body id="page-top" class="index">
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#page-top"><i class="fa fa-gamepad"></i>&nbsp;&nbsp;Games</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="../">Home</a>
-                    </li>
-                     <li class="page-scroll">
-                        <a href="http://blog.binarynonsense.com">Blog</a>
-                    </li>
-
-                    <li class="page-scroll">
-                        <a href="../projects">Projects</a>
-                    </li>
-                   
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-
-
-    <!-- Portfolio Grid Section -->
+ <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+  <img src="../imgs/bn_logo_120.png" alt="boy" class="w3-image" width="120" height="174">
+    <h1 class="w3-xxxlarge">GAMES</h1>
+  </header> 
+  
+  <div class="w3-content w3-justify w3-text-grey" id="about">
    
-    
-    <section class="portfolio" id="games">
-        <div class="container" style="max-width:650px;color:#888;">
-        
-
-        <h3>Handoru Island:</h3> (in development)
-
-        <p style="margin-top: 15px;">Handoru Island is still in development and is partially inspired by some of the things I enjoy about games like Euro Truck Simulator 2, the GTA series and other similar open world games (I've always been fascinated by how the cities in those games are created), Tricky Truck... So far, I'm quite happy with how everything is coming together and have started sharing test builds on <a href='https://binarynonsense.itch.io/handoru'>itch.io</a></p>
-        
-        <p><iframe src="https://itch.io/embed/177625" width="552" height="167" frameborder="0"></iframe></p>
-        
-        <h3>High Entropy:</h3> (in development)
-
-        <p style="margin-top: 15px;">Use computers (via GUIs or the command line), unlock doors, crawl through vents, fight enemies head on or find other ways to neutralize or avoid them... High Entropy is an action-adventure FPS inspired by some of my favorite immersive sims like Prey, Dishonored or Deus Ex: Mankind Divided, among others, although it won't be as complex as any of those games.</p>
-        
-         <p><iframe src="https://itch.io/embed/339562" width="552" height="167" frameborder="0"></iframe> </p>
-           
-        
+    <div class="w3-row-padding w3-padding-16">    
+        <div class="w3-col l6 m6 w3-margin-bottom">
+        <h3>HIGH ENTROPY</h3>
+        <p class="w3-opacity">in development</p>
+        <p>Use computers (via GUIs or the command line), unlock doors, crawl through vents, fight enemies head on or find other ways to neutralize or avoid them... High Entropy is an action-adventure FPS inspired by some of my favorite immersive sims like Prey, Dishonored or Deus Ex: Mankind Divided, among others, although it won't be as complex as any of those games.</p>
+        <p><a href="https://binarynonsense.itch.io/highentropy" target="_blank" class="w3-button w3-light-grey w3-block">Test Build</a></p>
+        </div>   
+        <div class="w3-col l6 m6 w3-margin-bottom">
+            <img class="slidesEntropy" src="../imgs/screenshots/he_01.jpg" style="width:100%;display:none">
+            <img class="slidesEntropy" src="../imgs/screenshots/he_02.jpg" style="width:100%">
+            <img class="slidesEntropy" src="../imgs/screenshots/he_03.jpg" style="width:100%;display:none">
+            <div class="w3-row-padding w3-section">
+                <div class="w3-col s4">
+                <img class="dotsEntropy w3-opacity w3-hover-opacity-off" src="../imgs/screenshots/he_01.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(1, 1)">
+                </div>
+                <div class="w3-col s4">
+                <img class="dotsEntropy w3-opacity w3-hover-opacity-off" src="../imgs/screenshots/he_02.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(2, 1)">
+                </div>
+                <div class="w3-col s4">
+                <img class="dotsEntropy w3-opacity w3-hover-opacity-off" src="../imgs/screenshots/he_03.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(3, 1)">
+                </div>
+            </div>
         </div>
-    </section> 
+    </div>     
     
-
-
-   
-    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-    <div class="scroll-top page-scroll visible-xs visble-sm">
-        <a class="btn btn-primary" href="#page-top">
-            <i class="fa fa-chevron-up"></i>
-        </a>
+    <div class="w3-row-padding w3-padding-16">     <!--  w3-grayscale  -->
+        <div class="w3-col l6 m6 w3-margin-bottom">
+        <h3>HANDORU ISLAND</h3>
+        <p class="w3-opacity">in development</p>
+        <p>Drive trucks and vans to deliver trailers, crates and other cargo around the map, while you earn money and XP... or just have some fun exploring the open-world island and interacting with its inhabitants. Handoru Island is partially inspired by some of the things I enjoy about games like Euro Truck Simulator 2, the GTA series (and other similar open world games), Tricky Truck...</p>
+        <p><a href="https://binarynonsense.itch.io/handoru" target="_blank" class="w3-button w3-light-grey w3-block">Test Build</a></p>
+        </div>   
+        <div class="w3-col l6 m6 w3-margin-bottom">
+            <!--  <img src="../imgs/handoruisland.png" alt="high entropy" style="width:100%"> -->
+            <img class="slidesHandoru" src="../imgs/screenshots/hi_01.jpg" style="width:100%;display:none">
+            <img class="slidesHandoru" src="../imgs/screenshots/hi_02.jpg" style="width:100%">
+            <img class="slidesHandoru" src="../imgs/screenshots/hi_03.jpg" style="width:100%;display:none">
+            <div class="w3-row-padding w3-section">
+                <div class="w3-col s4">
+                <img class="dotsHandoru w3-opacity w3-hover-opacity-off" src="../imgs/screenshots/hi_01.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(1, 0)">
+                </div>
+                <div class="w3-col s4">
+                <img class="dotsHandoru w3-opacity w3-hover-opacity-off" src="../imgs/screenshots/hi_02.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(2, 0)">
+                </div>
+                <div class="w3-col s4">
+                <img class="dotsHandoru w3-opacity w3-hover-opacity-off" src="../imgs/screenshots/hi_03.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(3, 0)">
+                </div>
+            </div>
+        </div>
     </div>
-    
-    <!-- Start of StatCounter Code for Default Guide -->
+  
+  </div>
+<!-- END PAGE CONTENT -->
+</div>
+
+<script>
+
+var slideIndex = [1,1];
+var slideId = ["slidesHandoru", "slidesEntropy"]
+var dotId = ["dotsHandoru", "dotsEntropy"]
+showDivs(1, 0);
+showDivs(1, 1);
+
+function currentDiv(n, no) {
+  showDivs(slideIndex[no] = n, no);
+}
+
+function showDivs(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  var dots = document.getElementsByClassName(dotId[no]);
+  if (n > x.length) {slideIndex[no] = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+  }
+  x[slideIndex[no]-1].style.display = "block";
+  dots[slideIndex[no]-1].className += " w3-opacity-off";
+}
+</script>
+
+<!-- Start of StatCounter Code for Default Guide -->
 <script type="text/javascript">
 var sc_project=3337120; 
 var sc_invisible=1; 
@@ -120,34 +171,12 @@ document.write("<sc"+"ript type='text/javascript' src='" +
 scJsHost+
 "statcounter.com/counter/counter.js'></"+"script>");
 </script>
-<noscript><div class="statcounter"><a title="web counter"
+<noscript><div class="statcounter"><a title=""
 href="http://statcounter.com/free-hit-counter/"
 target="_blank"><img class="statcounter"
-src="//c.statcounter.com/3337120/0/b64cb0f2/1/" alt="web
-counter"></a></div></noscript>
+src="//c.statcounter.com/3337120/0/b64cb0f2/1/" alt=""></a></div></noscript>
 <!-- End of StatCounter Code for Default Guide -->
 
- 
-
-
-    <!-- jQuery Version 1.11.0 -->
-    <script src="js/jquery-1.11.0.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="js/classie.js"></script>
-    <script src="js/cbpAnimatedHeader.js"></script>
-
-    <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/freelancer.js"></script>
-
 </body>
-
 </html>
+ 

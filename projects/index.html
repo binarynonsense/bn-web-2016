@@ -1,356 +1,307 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<title>Projects | Binary Nonsense | Website of Álvaro García</title>
 
-<head>
+<meta name='author' content='Alvaro Garcia C - www.binarynonsense.com' /> 
+<meta name='description' content='Binary Nonsense - Website and Portfolio of Álvaro García' /> 
+<meta name='keywords' content='Alvaro,Garcia,portfolio,art,programming,illustration, game, gamedev' /> 
+<link rel='shortcut icon' href='../imgs/favicon.ico' type='image/x-icon'/>
+<link rel='icon' href='../imgs/favicon.ico' type='image/x-icon'/> 
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <meta name='author' content='Alvaro Garcia C  -  www.binarynonsense.com' />
-    <meta name='description' content='Binary Nonsense - Website and Portfolio of Álvaro García' />
-    <meta name='keywords' content='Alvaro,Garcia,portfolio,art,programming,illustration, game, gamedev' />
-    <link rel='shortcut icon' href='img/favicon.ico' type='image/x-icon'/><link rel='icon' href='img/favicon.ico' type='image/x-icon'/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+</style>
+<style>
+.mySlides {display:none;}
 
-    <title>Projects | Binary Nonsense | Website of Álvaro García</title>
+.w3-third img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}
+.w3-third img:hover{opacity: 1}
+</style>
+<body class="w3-black">
 
-    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <!-- <img src="../imgs/bn_avatar.jpg" style="width:100%"> -->
+  <a href="../" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="./" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-gamepad w3-xxlarge"></i>
+    <p>GAMES</p>
+  </a>
+  <a href="../projects" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-archive w3-xxlarge"></i>
+    <p>PROJECTS</p>
+  </a>
+   <a href="http://blog.binarynonsense.com/" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-pencil w3-xxlarge" target="_blank"></i>
+    <p>BLOG</p>
+  </a>
+  <a href="../about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>ABOUT</p>
+  </a>
+</nav>
 
-    <!-- Custom CSS -->
-    <link href="css/freelancer.css" rel="stylesheet">
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="http://www.binarynonsense.com/" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="http://www.binarynonsense.com/games" class="w3-bar-item w3-button" style="width:25% !important">GAMES</a>
+    <a href="http://www.binarynonsense.com/projects" class="w3-bar-item w3-button" style="width:25% !important">PROJECTS</a>
+    <!-- <a href="http://blog.binarynonsense.com/" target="_blank" class="w3-bar-item w3-button" style="width:25% !important">BLOG</a>  -->   
+    <a href="http://www.binarynonsense.com/about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+  </div>
+</div>
 
-    <!-- Custom Fonts -->
-    <link href="font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-<body id="page-top" class="index">
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#page-top"><i class="fa fa-cog"></i>&nbsp;&nbsp;Projects</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="../">Home</a>
-                    </li>
-                     <li class="page-scroll">
-                        <a href="http://blog.binarynonsense.com">Blog</a>
-                    </li>
-                    
-                    <li class="page-scroll">
-                        <a href="../games">Games</a>
-                    </li>
-
-                    <li class="page-scroll">
-                        <a href="../about">About </a>
-                    </li>
-                   
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+ <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+  <img src="../imgs/bn_logo_120.png" alt="boy" class="w3-image" width="120" height="174">
+    <h1 class="w3-xxxlarge">PROJECTS</h1>
+     <div class="w3-container w3-padding-16 w3-center">
+        <div class="w3-bar">
+        <a href="#prototypes" class="w3-bar-item w3-button">Game Prototypes</a>
+        <a href="#software" class="w3-bar-item w3-button">Software</a>
+        <a href="#art" class="w3-bar-item w3-button">Graphic Art</a>
         </div>
-        <!-- /.container-fluid -->
-    </nav>
-
-
-    <!-- Portfolio Grid Section -->
-   
+    </div>
+  </header> 
+  
+  <div class="w3-content w3-justify w3-text-grey" id="about">
     
-    <section class="portfolio" id="games">
-        <div class="container" style="max-width: 950px;margin-top:-20px">
-        
-        <!--<img class="img-responsive" src="img/alvaro_2014_3_250px.png" alt="" width="200px">-->
-        <!--<p style="margin-top:30px; margin-bottom:0px; color:#000;">Here are some samples of art, programs, games, designs and other things I've created:</p>-->
-        
-        <!-- ------------- -->
-        
-            <div class="row">
-                <div class="col-lg-12 text-center"> 
-                <br/><br/><br/>
-                    <h2 style="font-size: 25px; color: #888;"><i class="fa fa-caret-right"></i>&nbsp;&nbsp;Prototypes & Small Games&nbsp;&nbsp;<i class="fa fa-caret-left"></i></h2>
-                    <!-- <hr class="star-primary"> -->
-                    <br/><br/><br/>
+    <a id="prototypes"></a><h2 class="w3-text-light-grey">Game Prototypes</h2>
+    <hr style="width:100%" class="w3-opacity">
+    
+    <div class="w3-row-padding w3-padding-16">    
+        <div class="w3-col l6 m6 w3-margin-bottom">
+            <h3>CITY PROJECT</h3>
+            <p class="w3-opacity">Last updated: 19 April 2012</p>
+            <p>My main goals for this projects were learning how a 3D game was made from the ground up (not using an already made engine) and improving my programming skills, while creating a 'proof of concept' demo showing what I had accomplished, and could do, in the process.</p> <p>  I created it using DirectX 9.0c for the graphics, Bullet Physics as the physics engine and OpenAL for the sound.</p>   
+            <p><a href="https://www.youtube.com/watch?v=13oEmJQ9NSw" target="_blank" class="w3-button w3-light-grey w3-block">Video</a></p>
+            <p><a href="http://www.indiedb.com/games/city-project/downloads/city-project-proof-of-concept-demo" target="_blank" class="w3-button w3-light-grey w3-block">Download</a></p>
+        </div>   
+        <div class="w3-col l6 m6 w3-margin-bottom">
+            <img class="slidesCity" src="../imgs/screenshots/city_01.jpg" style="width:100%;display:none">
+            <img class="slidesCity" src="../imgs/screenshots/city_02.jpg" style="width:100%">
+            <img class="slidesCity" src="../imgs/screenshots/city_04.jpg" style="width:100%;display:none">
+            <div class="w3-row-padding w3-section">
+                <div class="w3-col s4">
+                <img class="dotsCity w3-opacity w3-hover-opacity-off" src="../imgs/screenshots/city_01.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(1, 0)">
                 </div>
-            </div>
-            
-            <div class="row">
-                
-                <div class="col-sm-4 portfolio-item">
-                    <a href="./projects_city_project.html" class="portfolio-link">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                                <h4>City Project</h4>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/thumb_city_project_400x225.jpg" class="img-responsive" alt="">
-                    </a>
-                </div>                
-                <div class="col-sm-4 portfolio-item">
-                    <a href="./projects_raycaster.html" class="portfolio-link">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                                <h4>Raycaster Adventures</h4>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/thumb_raycaster_400x225.jpg" class="img-responsive" alt="">
-                    </a>
-                </div>    
-                <div class="col-sm-4 portfolio-item">
-                    <a href="./projects_marteos_games.html" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                                <h4>MaRTE OS Games</h4>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/thumb_martenoid_400x225.jpg" class="img-responsive" alt="">
-                    </a>
-                </div> 
-                
-           </div>  
-            
-
-        
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                <br/><br/><br/>
-                    <h2 style="font-size: 25px; color: #888;"><i class="fa fa-caret-right"></i>&nbsp;&nbsp;Artwork&nbsp;&nbsp;<i class="fa fa-caret-left"></i></h2><br/><br/><br/>
+                <div class="w3-col s4">
+                <img class="dotsCity w3-opacity w3-hover-opacity-off" src="../imgs/screenshots/city_02.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(2, 0)">
                 </div>
-            </div>
-            
-            <div class="row">
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#art_marteos_modal" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                                <h4>MaRTE OS Tshirt</h4>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/thumb_marteos_400x225.jpg" class="img-responsive" alt="">
-                    </a>
-                </div>  
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#art_8000millas_modal" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                                <h4>Book Cover</h4>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/thumb_8000millas_cover.jpg" class="img-responsive" alt="">
-                    </a>
-                </div>                
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#art_gnulinux_modal" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                                <h4>GNU+Linux</h4>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/thumb_gnulinux_400x225.jpg" class="img-responsive" alt="">
-                    </a>
+                <div class="w3-col s4">
+                <img class="dotsCity w3-opacity w3-hover-opacity-off" src="../imgs/screenshots/city_04.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(3, 0)">
                 </div>
-                
-           </div>
-           <div class="row">
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#art_batidoradigital_modal" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                                <h4>Batidora Digital</h4>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/thumb_batidora_400x225.jpg" class="img-responsive" alt="">
-                    </a>
-                </div>                
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#art_woman_modal" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                                <h4>Woman B/W</h4>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/thumb_woman_400x225.jpg" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#art_pintora_modal" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                                <h4>Pintora</h4>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/thumb_pintora_400x225.jpg" class="img-responsive" alt="">
-                    </a>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#art_sadbarbarian_modal" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                                <h4>Sad Barbarian</h4>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/thumb_sadbarbarian_400x225.jpg" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#art_commando_modal" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                                <h4>Commando</h4>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/thumb_commando_400x225.jpg" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#art_tshirts_modal" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                                <h4>T-Shirts</h4>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/thumb_tshirts_400x225.jpg" class="img-responsive" alt="">
-                    </a>
-                </div>
-            </div>
-            
-             <div class="row">
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#art_cityprojectmenu_modal" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                                <h4>City Project Menu</h4>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/thumb_citymenu_400x225.jpg" class="img-responsive" alt="">
-                    </a>
-                </div>
-                
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#art_piratas_modal" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                                <h4>Book Cover</h4>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/thumb_piratas_cover.jpg" class="img-responsive" alt="">
-                    </a>
-                </div> 
-                
-            </div>            
-            
-            
-        <!-- ------------- -->
-        
-            <div class="row">
-                <div class="col-lg-12 text-center"> 
-                <br/><br/><br/>
-                    <h2 style="font-size: 25px; color: #888;"><i class="fa fa-caret-right"></i>&nbsp;&nbsp;Software&nbsp;&nbsp;<i class="fa fa-caret-left"></i></h2>
-                    <!-- <hr class="star-primary"> -->
-                    <br/><br/><br/>
-                </div>
-            </div>          
-            
-           
-           <div class="row">
-                
-                <div class="col-sm-4 portfolio-item">
-                    <a href="./projects_alos.html" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                                <h4>My Operative System</h4>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/thumb_alos_400x225.jpg" class="img-responsive" alt="">
-                    </a>
-                </div>  
-                
-                <div class="col-sm-4 portfolio-item">
-                    <a href="./projects_other.html" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                                <h4>Other</h4>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/thumb_rtdviewer_400x225.jpg" class="img-responsive" alt="">
-                    </a>
-                </div> 
-                
-            </div>    
-            
-            
-           
-        <!-- </div>
-    </section> -->
-            
-            <!-- art -->
-            
-    <!-- <section class="portfolio" id="games">
-        <div class="container"> -->
-           
-        
+            </div> 
         </div>
-    </section> 
-    
-
-
-    <!-- Footer -->
-    <footer class="text-center" id="contact">
-
-        <div class="footer-below">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        copyright &copy; Álvaro García | page design based on the <a href='http://startbootstrap.com/template-overviews/freelancer/' target='_blank'>freelancer</a> template | icons font: <a href='http://fortawesome.github.io/Font-Awesome/' target='_blank'>font awesome</a>
-                    </div>
+    </div> 
+        
+    <div class="w3-row-padding w3-padding-16">     <!--  w3-grayscale  -->
+        <div class="w3-col l6 m6 w3-margin-bottom">
+            <h3>RAY CASTER ADVENTURES</h3>
+            <p class="w3-opacity">Last updated: 24 sep 2009</p>
+            <p>I enjoyed a lot playing Wolfenstein 3D and, even more, Doom years ago (I even enjoy playing them nowadays). Since then, the First Person Shooter genre is probably my favorite, and I always wanted to learn how John Carmack, John Romero and the guys from iD Software made those great games, and make one myself.</p><p>This is a game prototype I programmed using a technique from those early days called ray-casting.</p>
+            <p><a href="https://www.youtube.com/watch?v=DIQtsdn9mPk" target="_blank" class="w3-button w3-light-grey w3-block">Video</a></p>
+        </div>   
+        <div class="w3-col l6 m6 w3-margin-bottom">
+            <!--  <img src="../imgs/handoruisland.png" alt="high entropy" style="width:100%"> -->
+            <img class="slidesRay" src="../imgs/screenshots/ray_04.jpg" style="width:100%;display:none">
+            <img class="slidesRay" src="../imgs/screenshots/ray_02.jpg" style="width:100%">
+            <img class="slidesRay" src="../imgs/screenshots/ray_03.jpg" style="width:100%;display:none">
+            <div class="w3-row-padding w3-section">
+                <div class="w3-col s4">
+                <img class="dotsRay w3-opacity w3-hover-opacity-off" src="../imgs/screenshots/ray_04.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(1, 1)">
+                </div>
+                <div class="w3-col s4">
+                <img class="dotsRay w3-opacity w3-hover-opacity-off" src="../imgs/screenshots/ray_02.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(2, 1)">
+                </div>
+                <div class="w3-col s4">
+                <img class="dotsRay w3-opacity w3-hover-opacity-off" src="../imgs/screenshots/ray_03.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(3, 1)">
                 </div>
             </div>
         </div>
+    </div>
+    
+    <div class="w3-row-padding w3-padding-16">
+        <div class="w3-col l6 m6 w3-margin-bottom">
+            <h3>MaRTE OS GAMES</h3>
+            <p>Some small games I made for MaRTE OS, a Hard Real-Time Operating System for embedded applications developed in the Group of Computers and Real-Time of the University of Cantabria.</p>
+            <p><a href="https://www.youtube.com/playlist?list=PL32A934F67ACB2F7C" target="_blank" class="w3-button w3-light-grey w3-block">Videos</a></p>
+        </div>   
+        <div class="w3-col l6 m6 w3-margin-bottom">
+            <img class="slidesMarte" src="../imgs/screenshots/marte_03.jpg" style="width:100%;display:none">
+            <img class="slidesMarte" src="../imgs/screenshots/marte_02.jpg" style="width:100%">
+            <img class="slidesMarte" src="../imgs/screenshots/marte_01.jpg" style="width:100%;display:none">            
+            <div class="w3-row-padding w3-section">
+                <div class="w3-col s4">
+                <img class="dotsMarte w3-opacity w3-hover-opacity-off" src="../imgs/screenshots/marte_03.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(1, 2)">
+                </div>
+                <div class="w3-col s4">
+                <img class="dotsMarte w3-opacity w3-hover-opacity-off" src="../imgs/screenshots/marte_02.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(2, 2)">
+                </div>
+                <div class="w3-col s4">
+                <img class="dotsMarte w3-opacity w3-hover-opacity-off" src="../imgs/screenshots/marte_01.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(3, 2)">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <a id="software"></a><h2 class="w3-text-light-grey">Software</h2>
+    <hr style="width:100%" class="w3-opacity">
+    
+    <div class="w3-row-padding w3-padding-16">    
+        <div class="w3-col l6 m6 w3-margin-bottom">
+            <h3>ALOS (Álvaro's Operative System)</h3>
+            <p class="w3-opacity">Last updated: 2009</p>
+            <p><em>ALOS</em> was one of my pet projects for some time: developing a simple operative system in order to learn more about computers. There are some great tutorials in the internet that helped me begin, like <a href='http://www.jamesmolloy.co.uk/tutorial_html/index.html' target="_blank">JamesM's</a> and <a href='http://www.osdever.net/bkerndev/index.php' target="_blank">Brandon F's</a>, and really helpful communities like <a href='http://wiki.osdev.org/Main_Page' target="_blank">OSDev.org</a>. It also helped reading the amazing <a href='http://sos.enix.org/fr/PagePrincipale' target="_blank">series of articles</a> published in Linux Magazine describing the creation of the SOS operative system.</p>
+            <p>Current state: I programmed a simple command line interface and made a very basic VGA driver (not finished).</p>      
+            <p><a href="https://www.youtube.com/watch?v=4JsgIdO43SU" target="_blank" class="w3-button w3-light-grey w3-block">Video</a></p>
+        </div>   
+        <div class="w3-col l6 m6 w3-margin-bottom">
+            <img src="../imgs/screenshots/alos_01.jpg" style="width:100%">
+        </div>
+    </div> 
+    
+     <div class="w3-row-padding w3-padding-16">    
+        <div class="w3-col l6 m6 w3-margin-bottom">
+            <h3>MARTE2MAST</h3>
+            <p class="w3-opacity">Last updated: 2011</p>
+           <p>This program was part of the work I made as a researcher for the University of Cantabria.</p>
+            <p>Description: <a href='http://mast.unican.es/umlmast/marte2mast/index.html'>Marte2Mast</a>'s main goal was to generate a MAST text model from a UML-MARTE schedulability analysis input model, but it was extended to, if the user chooses so, invoke MAST to analyze the generated model and create a new version of the original UML model updated with the output data from MAST.</p>
+            <p>It was delivered as an Eclipse plugin, and implemented using the Eclipse technologies provided by Papyrus UML as graphical tool, the UML2 plugin as model repository, and the Acceleo plugin for the extraction of text from the UML2 models plus a significant amount of Java custom code.</p>
+            <p>The source code is also provided, under the GPL v2 license.</p>   
+            <p><a href="http://www.youtube.com/watch?v=1Tzg2cQsM5o" target="_blank" class="w3-button w3-light-grey w3-block">Video</a></p>
+            <p><a href="http://mast.unican.es/umlmast/marte2mast/index.html" target="_blank" class="w3-button w3-light-grey w3-block">Website</a></p>
+        </div>   
+        <div class="w3-col l6 m6 w3-margin-bottom">
+            <img src="../imgs/screenshots/marte2mast.jpg" style="width:100%">
+        </div>
+    </div> 
+    
+    <div class="w3-row-padding w3-padding-16">    
+        <div class="w3-col l6 m6 w3-margin-bottom">
+            <h3>RTDVIEWER</h3>
+            <p class="w3-opacity">Last updated: 2011</p>
+           <p>This is a program I made at home in my spare time to view the reports generated by a commercial tool I was using at work. The tool already provided its own report viewer, much more complete than mine, so there was no need for me to create one, I just did it as an excuse to learn some new skills. rtdViewer is programmed in c# running on mono and using GTK# to create the GUI and Cairo for the graphics.</p>   
+            <p><a href="http://www.youtube.com/watch?v=JoVhgozh-Hw" target="_blank" class="w3-button w3-light-grey w3-block">Video</a></p>
+        </div>   
+        <div class="w3-col l6 m6 w3-margin-bottom">
+            <img src="../imgs/screenshots/rtdviewer.jpg" style="width:100%">
+        </div>
+    </div> 
+    
+    <div class="w3-row-padding w3-padding-16">    
+        <div class="w3-col l6 m6 w3-margin-bottom">
+            <h3>YONAS CMS</h3>
+           <p>Yonas CMS is a content management system (CMS) I made years ago, while learning PHP. It was programmed using PHP 5, SQLite, Javascript and AJAX.</p>   
+            <p><a href="http://www.youtube.com/watch?v=JoVhgozh-Hw" target="_blank" class="w3-button w3-light-grey w3-block">Video</a></p>
+        </div>   
+        <div class="w3-col l6 m6 w3-margin-bottom">
+            <img src="../imgs/screenshots/yonascms.jpg" style="width:100%">
+        </div>
+    </div>     
+    
+    <a id="art"></a><h2 class="w3-text-light-grey">Graphic Art</h2>
+    <hr style="width:100%" class="w3-opacity">    
+    
+    <div class="w3-row-padding w3-padding-16">
+        <div class="w3-container w3-third">
+            <img src="../imgs/portfolio/thumb_marteos_400x225.jpg" alt="../imgs/portfolio/marteos_alvarogarcia.jpg" style="width:100%" onclick="onClickArt(this)">
+        </div>
+        <div class="w3-container w3-third">
+            <img src="../imgs/portfolio/thumb_8000millas_cover.jpg" alt="../imgs/portfolio/8000millas_cover_600px.jpg" style="width:100%" onclick="onClickArt(this)">
+        </div>
+        <div class="w3-container w3-third">
+            <img src="../imgs/portfolio/thumb_gnulinux_400x225.jpg" alt="../imgs/portfolio/gnu_linux_alvarogarcia.jpg" style="width:100%" onclick="onClickArt(this)">
+        </div>
+    </div>
+    
+    <div class="w3-row-padding w3-padding-16">
+        <div class="w3-container w3-third">
+            <img src="../imgs/portfolio/thumb_piratas_cover.jpg" alt="../imgs/portfolio/piratas_cover_600px.jpg" style="width:100%" onclick="onClickArt(this)">
+        </div>        
+        <div class="w3-container w3-third">
+            <img src="../imgs/portfolio/thumb_batidora_400x225.jpg" alt="../imgs/portfolio/batidoradigital_tshirt_design_alvarogarcia.jpg" style="width:100%" onclick="onClickArt(this)">
+        </div>
         
+    </div> 
+    
+
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+        <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img01" class="w3-image">
+        <p id="caption"></p>
+        </div>
+    </div>
+    
+    <div class="w3-padding-64">       
+    <!-- just to add padding -->
+    </div> 
+  
+<!-- END PAGE CONTENT -->
+</div>
+        
+<script>
+
+// slideshows
+var slideIndex = [1,1,1];
+var slideId = ["slidesCity", "slidesRay" , "slidesMarte"]
+var dotId = ["dotsCity", "dotsRay", "dotsMarte"]
+
+showDivs(1, 0);
+showDivs(1, 1);
+showDivs(1, 2);
+
+function currentDiv(n, no) {
+  showDivs(slideIndex[no] = n, no);
+}
+
+function showDivs(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  var dots = document.getElementsByClassName(dotId[no]);
+  if (n > x.length) {slideIndex[no] = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+  }
+  x[slideIndex[no]-1].style.display = "block";
+  dots[slideIndex[no]-1].className += " w3-opacity-off";
+}
+
+function onClickArt(element) {
+    //document.getElementById("img01").src = element.src;
+    document.getElementById("img01").src = element.alt;
+    document.getElementById("modal01").style.display = "block";
+    //var captionText = document.getElementById("caption");
+    //captionText.innerHTML = element.alt;
+}
+    
+</script>
+
 <!-- Start of StatCounter Code for Default Guide -->
 <script type="text/javascript">
 var sc_project=3337120; 
@@ -368,322 +319,7 @@ href="http://statcounter.com/free-hit-counter/"
 target="_blank"><img class="statcounter"
 src="//c.statcounter.com/3337120/0/b64cb0f2/1/" alt=""></a></div></noscript>
 <!-- End of StatCounter Code for Default Guide -->
-    </footer>
-
-    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-    <div class="scroll-top page-scroll visible-xs visble-sm">
-        <a class="btn btn-primary" href="#page-top">
-            <i class="fa fa-chevron-up"></i>
-        </a>
-    </div>
-    
-    <!-- Portfolio Modals -->
-    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-    
-    <!-- Artwork -->
-    
-    <!-- marteos -->
-    <div class="portfolio-modal modal fade" id="art_marteos_modal" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <p><img src="img/portfolio/marteos_alvarogarcia.jpg" class="img-responsive img-centered" alt=""></p>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- batidoradigital -->
-    <div class="portfolio-modal modal fade" id="art_batidoradigital_modal" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <p><img src="img/portfolio/batidoradigital_tshirt_design_alvarogarcia.jpg" class="img-responsive img-centered" alt=""></p>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- gnulinux -->
-    <div class="portfolio-modal modal fade" id="art_gnulinux_modal" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <p><img src="img/portfolio/gnu_linux_alvarogarcia.jpg" class="img-responsive img-centered" alt=""></p>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>   
-    
-    <!-- cityprojectmenu -->
-    <div class="portfolio-modal modal fade" id="art_cityprojectmenu_modal" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <p><img src="img/portfolio/blog.binarynonsense.com_20120320_menu_img_05_600px.jpg" class="img-responsive img-centered" alt=""></p>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- woman -->
-    <div class="portfolio-modal modal fade" id="art_woman_modal" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <p><img src="img/portfolio/woman1_ink_alvarogarcia.jpg" class="img-responsive img-centered" alt=""></p>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-     <!-- pintora -->
-    <div class="portfolio-modal modal fade" id="art_pintora_modal" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <p><img src="img/portfolio/pintora_color_by_alvarogarcia.jpg" class="img-responsive img-centered" alt=""></p>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- sadbarbarian -->
-    <div class="portfolio-modal modal fade" id="art_sadbarbarian_modal" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <p><img src="img/portfolio/sad_barbarian_redux_alvarogarcia.jpg" class="img-responsive img-centered" alt=""></p>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- commando -->
-    <div class="portfolio-modal modal fade" id="art_commando_modal" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <p><img src="img/portfolio/commando_by_alvarogarcia.jpg" class="img-responsive img-centered" alt=""></p>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- 8000millas -->
-    <div class="portfolio-modal modal fade" id="art_8000millas_modal" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <p><img src="img/portfolio/8000millas_cover_600px.jpg" class="img-responsive img-centered" alt=""></p>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- piratas -->
-    <div class="portfolio-modal modal fade" id="art_piratas_modal" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <p><img src="img/portfolio/piratas_cover_600px.jpg" class="img-responsive img-centered" alt=""></p>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- tshirts -->
-    <div class="portfolio-modal modal fade" id="art_tshirts_modal" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <p>You can see my tshirt designs, and buy them (I lowered my commision to 0 so they are cheaper, I wouldn't make much money from them anyway :D), on my spreadshirt.net store : <a href='http://binarynonsense.spreadshirt.net/' target='_blank'>http://binarynonsense.spreadshirt.net/</a></p>
-                            <p><img src="img/portfolio/600x300_tshirts_gnu.jpg" class="img-responsive img-centered" alt=""></p>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    
-    
-    
-    <!-- <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/submarine.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-    <!-- jQuery Version 1.11.0 -->
-    <script src="js/jquery-1.11.0.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="js/classie.js"></script>
-    <script src="js/cbpAnimatedHeader.js"></script>
-
-    <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/freelancer.js"></script>
 
 </body>
-
 </html>
+ 
