@@ -235,28 +235,60 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     
     <div class="w3-row-padding w3-padding-16">
         <div class="w3-container w3-third">
-            <img src="../imgs/portfolio/thumb_marteos_400x225.jpg" alt="../imgs/portfolio/marteos_alvarogarcia.jpg" style="width:100%" onclick="onClickArt(this)">
+            <img src="../imgs/portfolio/thumb_marteos_400x225.jpg" alt="../imgs/portfolio/marteos_alvarogarcia.jpg" style="width:100%" onclick="onClickGallery(this, 'modal_marteos')">
         </div>
         <div class="w3-container w3-third">
-            <img src="../imgs/portfolio/thumb_8000millas_cover.jpg" alt="../imgs/portfolio/8000millas_cover_600px.jpg" style="width:100%" onclick="onClickArt(this)">
+            <img src="../imgs/portfolio/thumb_8000millas_cover.jpg" alt="../imgs/portfolio/8000millas_cover_600px.jpg" style="width:100%" onclick="onClickGallery(this, 'modal_8000millas')">
         </div>
         <div class="w3-container w3-third">
-            <img src="../imgs/portfolio/thumb_gnulinux_400x225.jpg" alt="../imgs/portfolio/gnu_linux_alvarogarcia.jpg" style="width:100%" onclick="onClickArt(this)">
+            <img src="../imgs/portfolio/thumb_gnulinux_400x225.jpg" alt="../imgs/portfolio/gnu_linux_alvarogarcia.jpg" style="width:100%" onclick="onClickGallery(this, 'modal_gnulinux')">
         </div>
     </div>
     
     <div class="w3-row-padding w3-padding-16">
         <div class="w3-container w3-third">
-            <img src="../imgs/portfolio/thumb_piratas_cover.jpg" alt="../imgs/portfolio/piratas_cover_600px.jpg" style="width:100%" onclick="onClickArt(this)">
+            <img src="../imgs/portfolio/thumb_piratas_cover.jpg" alt="../imgs/portfolio/piratas_cover_600px.jpg" style="width:100%" onclick="onClickGallery(this, 'modal_piratas')">
         </div>        
         <div class="w3-container w3-third">
-            <img src="../imgs/portfolio/thumb_batidora_400x225.jpg" alt="../imgs/portfolio/batidoradigital_tshirt_design_alvarogarcia.jpg" style="width:100%" onclick="onClickArt(this)">
+            <img src="../imgs/portfolio/thumb_batidora_400x225.jpg" alt="../imgs/portfolio/batidoradigital_tshirt_design_alvarogarcia.jpg" style="width:100%" onclick="onClickGallery(this, 'modal_batidora')">
         </div>
         
     </div> 
     
+    <!-- Custom Modals-->
+    <div id="modal_marteos" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+        <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+            <img src="../imgs/portfolio/marteos_alvarogarcia.jpg" class="w3-image">
+        </div>
+    </div>
+    <div id="modal_8000millas" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+        <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+            <img src="../imgs/portfolio/8000millas_cover_600px.jpg" class="w3-image">
+        </div>
+    </div>
+    <div id="modal_gnulinux" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+        <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+            <img src="../imgs/portfolio/gnu_linux_alvarogarcia.jpg" class="w3-image">
+        </div>
+    </div>
+    <div id="modal_piratas" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+        <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+            <img src="../imgs/portfolio/piratas_cover_600px.jpg" class="w3-image">
+        </div>
+    </div>
+    <div id="modal_batidora" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+        <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+            <img src="../imgs/portfolio/batidoradigital_tshirt_design_alvarogarcia.jpg" class="w3-image">
+        </div>
+    </div>
+    
 
-    <!-- Modal for full size images on click-->
+    <!-- Generic Modal for full size images on click-->
     <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
         <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
         <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
@@ -309,6 +341,10 @@ function onClickArt(element) {
     document.getElementById("modal01").style.display = "block";
     //var captionText = document.getElementById("caption");
     //captionText.innerHTML = element.alt;
+}
+
+function onClickGallery(element, modalID) {
+    document.getElementById(modalID).style.display = "block";
 }
     
 </script>
