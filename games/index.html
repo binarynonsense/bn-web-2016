@@ -93,7 +93,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <div class="w3-row-padding w3-padding-16">    
         <div class="w3-col l6 m6 w3-margin-bottom">
         <h3 class="w3-text-light-grey">HIGH ENTROPY</h3>
-        <p class="w3-opacity">in development</p>
+        <!--  <p class="w3-opacity">in development</p>  -->
         <p>Use computers (via GUIs or the command line), unlock doors, crawl through vents, fight enemies head on or find other ways to neutralize or avoid them... High Entropy is an action-adventure FPS inspired by some of my favorite immersive sims like Prey, Dishonored or Deus Ex: Mankind Divided, among others, although it won't be as complex as any of those games.</p>
         <p><a href="https://binarynonsense.itch.io/highentropy" target="_blank" class="w3-button w3-black w3-border w3-block w3-border-grey linkbutton"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;More Info</a></p>
         <p><a href="https://binarynonsense.itch.io/highentropy#download" target="_blank" class="w3-button w3-black w3-border w3-block w3-border-grey linkbutton"><i class="fa fa-download"></i>&nbsp;&nbsp;Download (Test Build)</a></p>
@@ -133,7 +133,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <div class="w3-row-padding w3-padding-16">     <!--  w3-grayscale  -->
         <div class="w3-col l6 m6 w3-margin-bottom">
         <h3 class="w3-text-light-grey">HANDORU ISLAND</h3>
-        <p class="w3-opacity">in development</p>
+        <!--  <p class="w3-opacity">in development</p>  -->
         <p>Drive trucks and vans to deliver trailers, crates and other cargo around the map, while you earn money and XP... or just have some fun exploring the open-world island and interacting with its inhabitants. Handoru Island is partially inspired by some of the things I enjoy about games like Euro Truck Simulator 2, the GTA series (and other similar open world games), Tricky Truck...</p>
         <p><a href="https://binarynonsense.itch.io/handoru" target="_blank" class="w3-button w3-black w3-border w3-block w3-border-grey linkbutton"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;More Info</a></p>
         <p><a href="https://binarynonsense.itch.io/handoru#download" target="_blank" class="w3-button w3-black w3-border w3-block w3-border-grey linkbutton"><i class="fa fa-download"></i>&nbsp;&nbsp;Download (Test Build)</a></p>
@@ -170,6 +170,33 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
             </div>
         </div>
     </div>
+    
+    <div class="w3-row-padding w3-padding-16">     <!--  w3-grayscale  -->
+        <div class="w3-col l6 m6 w3-margin-bottom">
+        <h3 class="w3-text-light-grey">SOLITAIRE PROJECT</h3>
+        <!--  <p class="w3-opacity">in development</p>  -->
+        <p>A small game inspired by golf solitaire and similar games like Faerie Solitaire.</p>
+        <p><a href="https://www.youtube.com/watch?v=LZpXO_plts4" target="_blank" class="w3-button w3-black w3-border w3-block w3-border-grey linkbutton"><i class="fab fa-youtube"></i>&nbsp;&nbsp;Gameplay Video</a></p>
+        <p><a href="https://binarynonsense.itch.io/solitaire" target="_blank" class="w3-button w3-black w3-border w3-block w3-border-grey linkbutton"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;More Info</a></p>
+        <p><a href="https://binarynonsense.itch.io/solitaire#download" target="_blank" class="w3-button w3-black w3-border w3-block w3-border-grey linkbutton"><i class="fa fa-download"></i>&nbsp;&nbsp;Download (Test Build)</a></p>
+        </div>   
+        <div class="w3-col l6 m6 w3-margin-bottom w3-padding-large w3-margin-top">
+            <img class="slidesSolitaire" src="../imgs/screenshots/solitaire_01.jpg" style="width:100%">
+            <img class="slidesSolitaire" src="../imgs/screenshots/solitaire_02.jpg" style="width:100%;display:none">
+            <img class="slidesSolitaire" src="../imgs/screenshots/solitaire_03.jpg" style="width:100%;display:none">
+            <div class="w3-row-padding w3-section">
+                <div class="w3-col s4">
+                <img class="dotsSolitaire w3-opacity w3-hover-opacity-off" src="../imgs/screenshots/solitaire_01.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(1, 2)">
+                </div>
+                <div class="w3-col s4">
+                <img class="dotsSolitaire w3-opacity w3-hover-opacity-off" src="../imgs/screenshots/solitaire_02.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(2, 2)">
+                </div>
+                <div class="w3-col s4">
+                <img class="dotsSolitaire w3-opacity w3-hover-opacity-off" src="../imgs/screenshots/solitaire_03.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(3, 2)">
+                </div>
+            </div>
+        </div>
+    </div>
   
   </div>
 <!-- END PAGE CONTENT -->
@@ -177,11 +204,12 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
 <script>
 
-var slideIndex = [1,1];
-var slideId = ["slidesHandoru", "slidesEntropy"]
-var dotId = ["dotsHandoru", "dotsEntropy"]
+var slideIndex = [1,1,1];
+var slideId = ["slidesHandoru", "slidesEntropy", "slidesSolitaire"]
+var dotId = ["dotsHandoru", "dotsEntropy", "dotsSolitaire"]
 showDivs(1, 0);
 showDivs(1, 1);
+showDivs(1, 2);
 
 function currentDiv(n, no) {
   showDivs(slideIndex[no] = n, no);
