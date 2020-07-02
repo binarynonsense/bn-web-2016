@@ -1,256 +1,492 @@
 <!DOCTYPE html>
 <html>
-<title>Games | Binary Nonsense | Website of Álvaro García</title>
+  <title>Games | Binary Nonsense | Website of Álvaro García</title>
 
-<meta charset="UTF-8">
-<meta name='author' content='Alvaro Garcia C - www.binarynonsense.com' /> 
-<meta name='description' content='Binary Nonsense - Website and Portfolio of Álvaro García' /> 
-<meta name='keywords' content='Alvaro,Garcia,portfolio,art,programming,illustration, game, gamedev' /> 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="author" content="Alvaro Garcia C - www.binarynonsense.com" />
+  <meta
+    name="description"
+    content="Binary Nonsense - Website and Portfolio of Álvaro García"
+  />
+  <meta
+    name="keywords"
+    content="Alvaro,Garcia,portfolio,art,programming,illustration, game, gamedev"
+  />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<link rel='shortcut icon' href='../imgs/favicon.ico' type='image/x-icon'/>
-<link rel='icon' href='../imgs/favicon.ico' type='image/x-icon'/> 
-<link rel="stylesheet" href="../css/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<!-- <link href="../fonts/css/all.css" rel="stylesheet"> local fontawesome -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link rel="shortcut icon" href="../imgs/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="../imgs/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../css/w3.css" />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Montserrat"
+  />
+  <!-- <link href="../fonts/css/all.css" rel="stylesheet"> local fontawesome -->
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+    crossorigin="anonymous"
+  />
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Inconsolata"
+  />
 
-<style>
-body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-.w3-row-padding img {margin-bottom: 12px}
-/* Set the width of the sidebar to 120px */
-.w3-sidebar {width: 120px;background: #222;}
-/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-#main {margin-left: 120px}
-/* Remove margins from "page content" on small screens */
-@media only screen and (max-width: 600px) {#main {margin-left: 0}}
-</style>
-<style>
-.mySlides {display:none;}
-.linkbutton
-{
-    font-family: 'Inconsolata';
-    text-transform: lowercase;
-    color: grey !important;
-}
-.linkbutton i
-{
- display: inline-block; 
- vertical-align: middle;
-}
-</style>
-<body class="w3-black">
+  <style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Montserrat", sans-serif;
+    }
+    .w3-row-padding img {
+      margin-bottom: 12px;
+    }
+    /* Set the width of the sidebar to 120px */
+    .w3-sidebar {
+      width: 120px;
+      background: #222;
+    }
+    /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+    #main {
+      margin-left: 120px;
+    }
+    /* Remove margins from "page content" on small screens */
+    @media only screen and (max-width: 600px) {
+      #main {
+        margin-left: 0;
+      }
+    }
+  </style>
+  <style>
+    .mySlides {
+      display: none;
+    }
+    .linkbutton {
+      font-family: "Inconsolata";
+      text-transform: lowercase;
+      color: grey !important;
+    }
+    .linkbutton i {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  </style>
+  <body class="w3-black">
+    <!-- Icon Bar (Sidebar - hidden on small screens) -->
+    <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+      <a href="./" class="w3-bar-item w3-button w3-padding-small w3-black">
+        <i class="fa fa-gamepad w3-xlarge" style="padding-top: 10px;"></i>
+        <p>GAMES</p>
+      </a>
+      <a
+        href="../software"
+        class="w3-bar-item w3-button w3-padding-small w3-hover-black"
+      >
+        <i class="fas fa-save w3-xlarge" style="padding-top: 10px;"></i>
+        <p>SOFTWARE</p>
+      </a>
+      <a
+        href="../projects"
+        class="w3-bar-item w3-button w3-padding-small w3-hover-black"
+      >
+        <i class="fa fa-archive w3-xlarge" style="padding-top: 10px;"></i>
+        <p>OTHER</p>
+      </a>
+      <a
+        href="http://blog.binarynonsense.com/"
+        class="w3-bar-item w3-button w3-padding-small w3-hover-black"
+      >
+        <i class="fa fa-pencil-alt w3-xlarge" style="padding-top: 10px;"></i>
+        <p>BLOG</p>
+      </a>
+      <a
+        href="../about"
+        class="w3-bar-item w3-button w3-padding-small w3-hover-black"
+      >
+        <i class="fa fa-user w3-xlarge" style="padding-top: 10px;"></i>
+        <p>ABOUT</p>
+      </a>
+    </nav>
 
-<!-- Icon Bar (Sidebar - hidden on small screens) -->
-<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-  <a href="./" class="w3-bar-item w3-button w3-padding-small w3-black">
-    <i class="fa fa-gamepad w3-xlarge" style="padding-top: 10px;"></i>
-    <p>GAMES</p>
-  </a>
-   <a href="../software" class="w3-bar-item w3-button w3-padding-small w3-hover-black">
-    <i class="fas fa-save w3-xlarge" style="padding-top: 10px;"></i>
-    <p>SOFTWARE</p>
-  </a>
-  <a href="../projects" class="w3-bar-item w3-button w3-padding-small w3-hover-black">
-    <i class="fa fa-archive w3-xlarge" style="padding-top: 10px;"></i>
-    <p>OTHER</p>
-  </a>
-   <a href="http://blog.binarynonsense.com/" class="w3-bar-item w3-button w3-padding-small w3-hover-black">
-    <i class="fa fa-pencil-alt w3-xlarge" style="padding-top: 10px;"></i>
-    <p>BLOG</p>
-  </a>
-  <a href="../about" class="w3-bar-item w3-button w3-padding-small w3-hover-black">
-    <i class="fa fa-user w3-xlarge" style="padding-top: 10px;"></i>
-    <p>ABOUT</p>
-  </a>
-</nav>
+    <!-- Navbar on small screens (Hidden on medium and large screens) -->
+    <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+      <div
+        class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small"
+      >
+        <!-- <a href="http://www.binarynonsense.com/" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>  -->
+        <a
+          href="http://www.binarynonsense.com/games"
+          class="w3-bar-item w3-button"
+          style="width: 25% !important;"
+          >GAMES</a
+        >
+        <a
+          href="http://www.binarynonsense.com/software"
+          class="w3-bar-item w3-button"
+          style="width: 25% !important;"
+          >SOFTWARE</a
+        >
+        <a
+          href="http://www.binarynonsense.com/projects"
+          class="w3-bar-item w3-button"
+          style="width: 25% !important;"
+          >OTHER</a
+        >
+        <a
+          href="http://blog.binarynonsense.com/"
+          target="_blank"
+          class="w3-bar-item w3-button"
+          style="width: 25% !important;"
+          >BLOG</a
+        >
+        <a
+          href="http://www.binarynonsense.com/about"
+          class="w3-bar-item w3-button"
+          style="width: 25% !important;"
+          >ABOUT</a
+        >
+      </div>
+    </div>
 
-<!-- Navbar on small screens (Hidden on medium and large screens) -->
-<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <!-- <a href="http://www.binarynonsense.com/" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>  -->
-    <a href="http://www.binarynonsense.com/games" class="w3-bar-item w3-button" style="width:25% !important">GAMES</a>
-    <a href="http://www.binarynonsense.com/software" class="w3-bar-item w3-button" style="width:25% !important">SOFTWARE</a>
-    <a href="http://www.binarynonsense.com/projects" class="w3-bar-item w3-button" style="width:25% !important">OTHER</a>
-    <a href="http://blog.binarynonsense.com/" target="_blank" class="w3-bar-item w3-button" style="width:25% !important">BLOG</a>   
-    <a href="http://www.binarynonsense.com/about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
-  </div>
-</div>
+    <!-- Page Content -->
+    <div class="w3-padding-large" id="main">
+      <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+        <img
+          src="../imgs/bn_logo_120.png"
+          alt="binarynonsense"
+          class="w3-image"
+          width="120"
+          height="174"
+        />
+        <h1 class="w3-xxxlarge">GAMES</h1>
+      </header>
 
-<!-- Page Content -->
-<div class="w3-padding-large" id="main">
-
- <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-  <img src="../imgs/bn_logo_120.png" alt="binarynonsense" class="w3-image" width="120" height="174">
-    <h1 class="w3-xxxlarge">GAMES</h1>
-  </header> 
-  
-  <div class="w3-content w3-justify w3-text-grey" id="about">
-   
-    <div class="w3-row-padding w3-padding-16">    
-        <div class="w3-col l6 m6 w3-margin-bottom">
-        <h3 class="w3-text-light-grey">HIGH ENTROPY</h3>
-        <!--  <p class="w3-opacity">in development</p>  -->
-        <p>Use computers (via GUIs or the command line), unlock doors, crawl through vents, fight enemies head on or find other ways to neutralize or avoid them... High Entropy is an action-adventure FPS inspired by some of my favorite immersive sims like Prey, Dishonored or Deus Ex: Mankind Divided, among others, although it won't be as complex as any of those games.</p>
-        <p><a href="https://binarynonsense.itch.io/highentropy" target="_blank" class="w3-button w3-black w3-border w3-block w3-border-grey linkbutton"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;More Info</a></p>
-        <p><a href="https://www.youtube.com/playlist?list=PLh-lVZm1ILfAARvukTYmlMvz3xjMvTC-d" target="_blank" class="w3-button w3-black w3-border w3-block w3-border-grey linkbutton"><i class="fab fa-youtube"></i>&nbsp;&nbsp;Youtubers' Videos</a></p>
-        <p><a href="https://binarynonsense.itch.io/highentropy#download" target="_blank" class="w3-button w3-black w3-border w3-block w3-border-grey linkbutton"><i class="fa fa-download"></i>&nbsp;&nbsp;Download (Test Build)</a></p>
-        </div>   
-        <div class="w3-col l6 m6 w3-margin-bottom w3-padding-large w3-margin-top">
-            <img class="slidesEntropy" src="../imgs/screenshots/he_04.jpg" style="width:100%">
-            <img class="slidesEntropy" src="../imgs/screenshots/he_02.jpg" style="width:100%;display:none">
-            <img class="slidesEntropy" src="../imgs/screenshots/he_01.jpg" style="width:100%;display:none">
-            <img class="slidesEntropy" src="../imgs/screenshots/he_05.jpg" style="width:100%;display:none">
-            <img class="slidesEntropy" src="../imgs/screenshots/he_07.jpg" style="width:100%;display:none">
-            <img class="slidesEntropy" src="../imgs/screenshots/he_06.jpg" style="width:100%;display:none">            
+      <div class="w3-content w3-justify w3-text-grey" id="about">
+        <div class="w3-row-padding w3-padding-16">
+          <div class="w3-col l6 m6 w3-margin-bottom">
+            <h3 class="w3-text-light-grey">HIGH ENTROPY</h3>
+            <!--  <p class="w3-opacity">in development</p>  -->
+            <p>
+              Use computers (via GUIs or the command line), unlock doors, crawl
+              through vents, fight enemies head on or find other ways to
+              neutralize or avoid them... High Entropy is an action-adventure
+              FPS inspired by some of my favorite immersive sims like Prey,
+              Dishonored or Deus Ex: Mankind Divided, among others, although it
+              won't be as complex as any of those games.
+            </p>
+            <p>
+              <a
+                href="https://binarynonsense.itch.io/highentropy"
+                target="_blank"
+                class="w3-button w3-black w3-border w3-block w3-border-grey linkbutton"
+                ><i class="fa fa-info-circle"></i>&nbsp;&nbsp;More Info</a
+              >
+            </p>
+            <p>
+              <a
+                href="https://www.youtube.com/playlist?list=PLh-lVZm1ILfAARvukTYmlMvz3xjMvTC-d"
+                target="_blank"
+                class="w3-button w3-black w3-border w3-block w3-border-grey linkbutton"
+                ><i class="fab fa-youtube"></i>&nbsp;&nbsp;Youtubers' Videos</a
+              >
+            </p>
+            <p>
+              <a
+                href="https://binarynonsense.itch.io/highentropy#download"
+                target="_blank"
+                class="w3-button w3-black w3-border w3-block w3-border-grey linkbutton"
+                ><i class="fa fa-download"></i>&nbsp;&nbsp;Download (Test
+                Build)</a
+              >
+            </p>
+          </div>
+          <div
+            class="w3-col l6 m6 w3-margin-bottom w3-padding-large w3-margin-top"
+          >
+            <img
+              class="slidesEntropy"
+              src="../imgs/screenshots/he_04.jpg"
+              style="width: 100%;"
+            />
+            <img
+              class="slidesEntropy"
+              src="../imgs/screenshots/he_02.jpg"
+              style="width: 100%; display: none;"
+            />
+            <img
+              class="slidesEntropy"
+              src="../imgs/screenshots/he_01.jpg"
+              style="width: 100%; display: none;"
+            />
+            <img
+              class="slidesEntropy"
+              src="../imgs/screenshots/he_05.jpg"
+              style="width: 100%; display: none;"
+            />
+            <img
+              class="slidesEntropy"
+              src="../imgs/screenshots/he_07.jpg"
+              style="width: 100%; display: none;"
+            />
+            <img
+              class="slidesEntropy"
+              src="../imgs/screenshots/he_06.jpg"
+              style="width: 100%; display: none;"
+            />
             <div class="w3-row-padding w3-section">
-                <div class="w3-col s4">
-                <img class="dotsEntropy w3-opacity w3-hover-opacity-off" src="../imgs/screenshots/he_04.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(1, 1)">
-                </div>
-                <div class="w3-col s4">
-                <img class="dotsEntropy w3-opacity w3-hover-opacity-off" src="../imgs/screenshots/he_02.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(2, 1)">
-                </div>
-                <div class="w3-col s4">
-                <img class="dotsEntropy w3-opacity w3-hover-opacity-off" src="../imgs/screenshots/he_01.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(3, 1)">
-                </div>
+              <div class="w3-col s4">
+                <img
+                  class="dotsEntropy w3-opacity w3-hover-opacity-off"
+                  src="../imgs/screenshots/he_04.jpg"
+                  style="width: 100%; cursor: pointer;"
+                  onclick="currentDiv(1, 1)"
+                />
+              </div>
+              <div class="w3-col s4">
+                <img
+                  class="dotsEntropy w3-opacity w3-hover-opacity-off"
+                  src="../imgs/screenshots/he_02.jpg"
+                  style="width: 100%; cursor: pointer;"
+                  onclick="currentDiv(2, 1)"
+                />
+              </div>
+              <div class="w3-col s4">
+                <img
+                  class="dotsEntropy w3-opacity w3-hover-opacity-off"
+                  src="../imgs/screenshots/he_01.jpg"
+                  style="width: 100%; cursor: pointer;"
+                  onclick="currentDiv(3, 1)"
+                />
+              </div>
             </div>
             <div class="w3-row-padding w3-section">
-                <div class="w3-col s4">
-                <img class="dotsEntropy w3-opacity w3-hover-opacity-off" src="../imgs/screenshots/he_05.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(4, 1)">
-                </div>
-                <div class="w3-col s4">
-                <img class="dotsEntropy w3-opacity w3-hover-opacity-off" src="../imgs/screenshots/he_07.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(5, 1)">
-                </div>
-                <div class="w3-col s4">
-                <img class="dotsEntropy w3-opacity w3-hover-opacity-off" src="../imgs/screenshots/he_06.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(6, 1)">
-                </div>
+              <div class="w3-col s4">
+                <img
+                  class="dotsEntropy w3-opacity w3-hover-opacity-off"
+                  src="../imgs/screenshots/he_05.jpg"
+                  style="width: 100%; cursor: pointer;"
+                  onclick="currentDiv(4, 1)"
+                />
+              </div>
+              <div class="w3-col s4">
+                <img
+                  class="dotsEntropy w3-opacity w3-hover-opacity-off"
+                  src="../imgs/screenshots/he_07.jpg"
+                  style="width: 100%; cursor: pointer;"
+                  onclick="currentDiv(5, 1)"
+                />
+              </div>
+              <div class="w3-col s4">
+                <img
+                  class="dotsEntropy w3-opacity w3-hover-opacity-off"
+                  src="../imgs/screenshots/he_06.jpg"
+                  style="width: 100%; cursor: pointer;"
+                  onclick="currentDiv(6, 1)"
+                />
+              </div>
             </div>
+          </div>
         </div>
-    </div>     
-    
-    <div class="w3-row-padding w3-padding-16">     <!--  w3-grayscale  -->
-        <div class="w3-col l6 m6 w3-margin-bottom">
-        <h3 class="w3-text-light-grey">HANDORU ISLAND</h3>
-        <!--  <p class="w3-opacity">in development</p>  -->
-        <p>Drive trucks and vans to deliver trailers, crates and other cargo around the map, while you earn money and XP... or just have some fun exploring the open-world island and interacting with its inhabitants. Handoru Island is partially inspired by some of the things I enjoy about games like Euro Truck Simulator 2, the GTA series (and other similar open world games), Tricky Truck...</p>
-        <p><a href="https://binarynonsense.itch.io/handoru" target="_blank" class="w3-button w3-black w3-border w3-block w3-border-grey linkbutton"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;More Info</a></p>
-        <p><a href="https://www.youtube.com/watch?v=_dksn0jkLGk" target="_blank" class="w3-button w3-black w3-border w3-block w3-border-grey linkbutton"><i class="fab fa-youtube"></i>&nbsp;&nbsp;Gameplay Video</a></p>
-        <p><a href="https://binarynonsense.itch.io/handoru#download" target="_blank" class="w3-button w3-black w3-border w3-block w3-border-grey linkbutton"><i class="fa fa-download"></i>&nbsp;&nbsp;Download (Test Build)</a></p>
-        </div>   
-        <div class="w3-col l6 m6 w3-margin-bottom w3-padding-large w3-margin-top">
+
+        <div class="w3-row-padding w3-padding-16">
+          <!--  w3-grayscale  -->
+          <div class="w3-col l6 m6 w3-margin-bottom">
+            <h3 class="w3-text-light-grey">HANDORU ISLAND</h3>
+            <!--  <p class="w3-opacity">in development</p>  -->
+            <p>
+              Drive trucks and vans to deliver trailers, crates and other cargo
+              around the map, while you earn money and XP... or just have some
+              fun exploring the open-world island and interacting with its
+              inhabitants. Handoru Island is partially inspired by some of the
+              things I enjoy about games like Euro Truck Simulator 2, the GTA
+              series (and other similar open world games), Tricky Truck...
+            </p>
+            <p>
+              <a
+                href="https://binarynonsense.itch.io/handoru"
+                target="_blank"
+                class="w3-button w3-black w3-border w3-block w3-border-grey linkbutton"
+                ><i class="fa fa-info-circle"></i>&nbsp;&nbsp;More Info</a
+              >
+            </p>
+            <p>
+              <a
+                href="https://www.youtube.com/watch?v=_dksn0jkLGk"
+                target="_blank"
+                class="w3-button w3-black w3-border w3-block w3-border-grey linkbutton"
+                ><i class="fab fa-youtube"></i>&nbsp;&nbsp;Gameplay Video</a
+              >
+            </p>
+            <p>
+              <a
+                href="https://binarynonsense.itch.io/handoru#download"
+                target="_blank"
+                class="w3-button w3-black w3-border w3-block w3-border-grey linkbutton"
+                ><i class="fa fa-download"></i>&nbsp;&nbsp;Download (Test
+                Build)</a
+              >
+            </p>
+          </div>
+          <div
+            class="w3-col l6 m6 w3-margin-bottom w3-padding-large w3-margin-top"
+          >
             <!--  <img src="../imgs/handoruisland.png" alt="high entropy" style="width:100%"> -->
-            <img class="slidesHandoru" src="../imgs/screenshots/hi_01.jpg" style="width:100%">
-            <img class="slidesHandoru" src="../imgs/screenshots/hi_02.jpg" style="width:100%;display:none">
-            <img class="slidesHandoru" src="../imgs/screenshots/hi_03.jpg" style="width:100%;display:none">
-            <img class="slidesHandoru" src="../imgs/screenshots/hi_04.jpg" style="width:100%;display:none">
-            <img class="slidesHandoru" src="../imgs/screenshots/hi_05.jpg" style="width:100%;display:none">
-            <img class="slidesHandoru" src="../imgs/screenshots/hi_06.jpg" style="width:100%;display:none">
+            <img
+              class="slidesHandoru"
+              src="../imgs/screenshots/hi_01.jpg"
+              style="width: 100%;"
+            />
+            <img
+              class="slidesHandoru"
+              src="../imgs/screenshots/hi_02.jpg"
+              style="width: 100%; display: none;"
+            />
+            <img
+              class="slidesHandoru"
+              src="../imgs/screenshots/hi_03.jpg"
+              style="width: 100%; display: none;"
+            />
+            <img
+              class="slidesHandoru"
+              src="../imgs/screenshots/hi_04.jpg"
+              style="width: 100%; display: none;"
+            />
+            <img
+              class="slidesHandoru"
+              src="../imgs/screenshots/hi_05.jpg"
+              style="width: 100%; display: none;"
+            />
+            <img
+              class="slidesHandoru"
+              src="../imgs/screenshots/hi_06.jpg"
+              style="width: 100%; display: none;"
+            />
             <div class="w3-row-padding w3-section">
-                <div class="w3-col s4">
-                <img class="dotsHandoru w3-opacity w3-hover-opacity-off" src="../imgs/screenshots/hi_01.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(1, 0)">
-                </div>
-                <div class="w3-col s4">
-                <img class="dotsHandoru w3-opacity w3-hover-opacity-off" src="../imgs/screenshots/hi_02.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(2, 0)">
-                </div>
-                <div class="w3-col s4">
-                <img class="dotsHandoru w3-opacity w3-hover-opacity-off" src="../imgs/screenshots/hi_03.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(3, 0)">
-                </div>
+              <div class="w3-col s4">
+                <img
+                  class="dotsHandoru w3-opacity w3-hover-opacity-off"
+                  src="../imgs/screenshots/hi_01.jpg"
+                  style="width: 100%; cursor: pointer;"
+                  onclick="currentDiv(1, 0)"
+                />
+              </div>
+              <div class="w3-col s4">
+                <img
+                  class="dotsHandoru w3-opacity w3-hover-opacity-off"
+                  src="../imgs/screenshots/hi_02.jpg"
+                  style="width: 100%; cursor: pointer;"
+                  onclick="currentDiv(2, 0)"
+                />
+              </div>
+              <div class="w3-col s4">
+                <img
+                  class="dotsHandoru w3-opacity w3-hover-opacity-off"
+                  src="../imgs/screenshots/hi_03.jpg"
+                  style="width: 100%; cursor: pointer;"
+                  onclick="currentDiv(3, 0)"
+                />
+              </div>
             </div>
             <div class="w3-row-padding w3-section">
-                <div class="w3-col s4">
-                <img class="dotsHandoru w3-opacity w3-hover-opacity-off" src="../imgs/screenshots/hi_04.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(4, 0)">
-                </div>
-                <div class="w3-col s4">
-                <img class="dotsHandoru w3-opacity w3-hover-opacity-off" src="../imgs/screenshots/hi_05.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(5, 0)">
-                </div>
-                <div class="w3-col s4">
-                <img class="dotsHandoru w3-opacity w3-hover-opacity-off" src="../imgs/screenshots/hi_06.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(6, 0)">
-                </div>
+              <div class="w3-col s4">
+                <img
+                  class="dotsHandoru w3-opacity w3-hover-opacity-off"
+                  src="../imgs/screenshots/hi_04.jpg"
+                  style="width: 100%; cursor: pointer;"
+                  onclick="currentDiv(4, 0)"
+                />
+              </div>
+              <div class="w3-col s4">
+                <img
+                  class="dotsHandoru w3-opacity w3-hover-opacity-off"
+                  src="../imgs/screenshots/hi_05.jpg"
+                  style="width: 100%; cursor: pointer;"
+                  onclick="currentDiv(5, 0)"
+                />
+              </div>
+              <div class="w3-col s4">
+                <img
+                  class="dotsHandoru w3-opacity w3-hover-opacity-off"
+                  src="../imgs/screenshots/hi_06.jpg"
+                  style="width: 100%; cursor: pointer;"
+                  onclick="currentDiv(6, 0)"
+                />
+              </div>
             </div>
+          </div>
         </div>
+      </div>
+      <!-- END PAGE CONTENT -->
     </div>
-    
-    <div class="w3-row-padding w3-padding-16">     <!--  w3-grayscale  -->
-        <div class="w3-col l6 m6 w3-margin-bottom">
-        <h3 class="w3-text-light-grey">SOLITAIRE PROJECT</h3>
-        <!--  <p class="w3-opacity">in development</p>  -->
-        <p>A small game inspired by golf solitaire and similar games like Faerie Solitaire.</p>
-        <p><a href="https://binarynonsense.itch.io/solitaire" target="_blank" class="w3-button w3-black w3-border w3-block w3-border-grey linkbutton"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;More Info</a></p>
-        <p><a href="https://www.youtube.com/watch?v=LZpXO_plts4" target="_blank" class="w3-button w3-black w3-border w3-block w3-border-grey linkbutton"><i class="fab fa-youtube"></i>&nbsp;&nbsp;Gameplay Video</a></p>        
-        <p><a href="https://binarynonsense.itch.io/solitaire#download" target="_blank" class="w3-button w3-black w3-border w3-block w3-border-grey linkbutton"><i class="fa fa-download"></i>&nbsp;&nbsp;Download (Test Build)</a></p>
-        </div>   
-        <div class="w3-col l6 m6 w3-margin-bottom w3-padding-large w3-margin-top">
-            <img class="slidesSolitaire" src="../imgs/screenshots/solitaire_01.jpg" style="width:100%">
-            <img class="slidesSolitaire" src="../imgs/screenshots/solitaire_02.jpg" style="width:100%;display:none">
-            <img class="slidesSolitaire" src="../imgs/screenshots/solitaire_03.jpg" style="width:100%;display:none">
-            <div class="w3-row-padding w3-section">
-                <div class="w3-col s4">
-                <img class="dotsSolitaire w3-opacity w3-hover-opacity-off" src="../imgs/screenshots/solitaire_01.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(1, 2)">
-                </div>
-                <div class="w3-col s4">
-                <img class="dotsSolitaire w3-opacity w3-hover-opacity-off" src="../imgs/screenshots/solitaire_02.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(2, 2)">
-                </div>
-                <div class="w3-col s4">
-                <img class="dotsSolitaire w3-opacity w3-hover-opacity-off" src="../imgs/screenshots/solitaire_03.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(3, 2)">
-                </div>
-            </div>
-        </div>
-    </div>
-  
-  </div>
-<!-- END PAGE CONTENT -->
-</div>
 
-<script>
+    <script>
+      var slideIndex = [1, 1, 1];
+      var slideId = ["slidesHandoru", "slidesEntropy"];
+      var dotId = ["dotsHandoru", "dotsEntropy"];
+      showDivs(1, 0);
+      showDivs(1, 1);
 
-var slideIndex = [1,1,1];
-var slideId = ["slidesHandoru", "slidesEntropy", "slidesSolitaire"]
-var dotId = ["dotsHandoru", "dotsEntropy", "dotsSolitaire"]
-showDivs(1, 0);
-showDivs(1, 1);
-showDivs(1, 2);
+      function currentDiv(n, no) {
+        showDivs((slideIndex[no] = n), no);
+      }
 
-function currentDiv(n, no) {
-  showDivs(slideIndex[no] = n, no);
-}
+      function showDivs(n, no) {
+        var i;
+        var x = document.getElementsByClassName(slideId[no]);
+        var dots = document.getElementsByClassName(dotId[no]);
+        if (n > x.length) {
+          slideIndex[no] = 1;
+        }
+        if (n < 1) {
+          slideIndex = x.length;
+        }
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+        }
+        x[slideIndex[no] - 1].style.display = "block";
+        dots[slideIndex[no] - 1].className += " w3-opacity-off";
+      }
+    </script>
 
-function showDivs(n, no) {
-  var i;
-  var x = document.getElementsByClassName(slideId[no]);
-  var dots = document.getElementsByClassName(dotId[no]);
-  if (n > x.length) {slideIndex[no] = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
-  }
-  x[slideIndex[no]-1].style.display = "block";
-  dots[slideIndex[no]-1].className += " w3-opacity-off";
-}
-</script>
-
-<!-- Start of StatCounter Code for Default Guide -->
-<script type="text/javascript">
-var sc_project=3337120; 
-var sc_invisible=1; 
-var sc_security="b64cb0f2"; 
-var sc_client_storage="disabled"; 
-var scJsHost = (("https:" == document.location.protocol) ?
-"https://secure." : "http://www.");
-document.write("<sc"+"ript type='text/javascript' src='" +
-scJsHost+
-"statcounter.com/counter/counter.js'></"+"script>");
-</script>
-<noscript><div class="statcounter"><a title=""
-href="http://statcounter.com/free-hit-counter/"
-target="_blank"><img class="statcounter"
-src="//c.statcounter.com/3337120/0/b64cb0f2/1/" alt=""></a></div></noscript>
-<!-- End of StatCounter Code for Default Guide -->
-
-</body>
+    <!-- Start of StatCounter Code for Default Guide -->
+    <script type="text/javascript">
+      var sc_project = 3337120;
+      var sc_invisible = 1;
+      var sc_security = "b64cb0f2";
+      var sc_client_storage = "disabled";
+      var scJsHost =
+        "https:" == document.location.protocol
+          ? "https://secure."
+          : "http://www.";
+      document.write(
+        "<sc" +
+          "ript type='text/javascript' src='" +
+          scJsHost +
+          "statcounter.com/counter/counter.js'></" +
+          "script>"
+      );
+    </script>
+    <noscript
+      ><div class="statcounter">
+        <a
+          title=""
+          href="http://statcounter.com/free-hit-counter/"
+          target="_blank"
+          ><img
+            class="statcounter"
+            src="//c.statcounter.com/3337120/0/b64cb0f2/1/"
+            alt=""
+        /></a></div
+    ></noscript>
+    <!-- End of StatCounter Code for Default Guide -->
+  </body>
 </html>
- 
