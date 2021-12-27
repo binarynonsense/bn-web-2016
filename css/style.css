@@ -44,10 +44,6 @@ a:hover {
   padding: 8px 5px 5px 5px;
 }
 
-/*.topnav a.logo:hover {
-    background-color: #000;
-  }*/
-
 .topnav a.logo:hover img {
   filter: invert(100%);
 }
