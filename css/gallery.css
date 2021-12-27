@@ -1,0 +1,33 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 1rem;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.grid > div {
+  background: black;
+  padding: 1rem;
+  display: grid;
+  place-items: center;
+}
+.grid > div::before {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+  grid-area: 1/1/2/2;
+}
+.grid > div a {
+  width: 100%;
+  grid-area: 1/1/2/2;
+}
+
+.grid > div a:hover img {
+  filter: brightness(1.25);
+  /* filter: sepia(50%); */
+  /* filter: blur(1px); */
+}
+
+.grid > div a img {
+  width: 100%;
+}

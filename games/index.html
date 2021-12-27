@@ -28,149 +28,49 @@
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
     crossorigin="anonymous"
   />
-
   <link
     rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Inconsolata"
   />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Inconsolata"
+  />
+  <link rel="stylesheet" href="../css/style.css" />
 
-  <style>
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: "Montserrat", sans-serif;
-    }
-    .w3-row-padding img {
-      margin-bottom: 12px;
-    }
-    /* Set the width of the sidebar to 120px */
-    .w3-sidebar {
-      width: 120px;
-      background: #222;
-    }
-    /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-    #main {
-      margin-left: 120px;
-    }
-    /* Remove margins from "page content" on small screens */
-    @media only screen and (max-width: 600px) {
-      #main {
-        margin-left: 0;
-      }
-    }
-  </style>
-  <style>
-    .mySlides {
-      display: none;
-    }
-    .linkbutton {
-      font-family: "Inconsolata";
-      text-transform: lowercase;
-      color: grey !important;
-    }
-    .linkbutton i {
-      display: inline-block;
-      vertical-align: middle;
-    }
-  </style>
   <body class="w3-black">
-    <!-- Icon Bar (Sidebar - hidden on small screens) -->
-    <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-      <a href="./" class="w3-bar-item w3-button w3-padding-small w3-black">
-        <i class="fa fa-gamepad w3-xlarge" style="padding-top: 10px;"></i>
-        <p>GAMES</p>
-      </a>
-      <a
-        href="../software"
-        class="w3-bar-item w3-button w3-padding-small w3-hover-black"
-      >
-        <i class="fas fa-save w3-xlarge" style="padding-top: 10px;"></i>
-        <p>SOFTWARE</p>
-      </a>
-      <a
-        href="../projects"
-        class="w3-bar-item w3-button w3-padding-small w3-hover-black"
-      >
-        <i class="fa fa-archive w3-xlarge" style="padding-top: 10px;"></i>
-        <p>OTHER</p>
-      </a>
-      <a
-        href="http://blog.binarynonsense.com/"
-        class="w3-bar-item w3-button w3-padding-small w3-hover-black"
-      >
-        <i class="fa fa-pencil-alt w3-xlarge" style="padding-top: 10px;"></i>
-        <p>BLOG</p>
-      </a>
-      <a
-        href="../about"
-        class="w3-bar-item w3-button w3-padding-small w3-hover-black"
-      >
-        <i class="fa fa-user w3-xlarge" style="padding-top: 10px;"></i>
-        <p>ABOUT</p>
-      </a>
-    </nav>
-
-    <!-- Navbar on small screens (Hidden on medium and large screens) -->
-    <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-      <div
-        class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small"
-      >
-        <!-- <a href="http://www.binarynonsense.com/" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>  -->
-        <a
-          href="http://www.binarynonsense.com/games"
-          class="w3-bar-item w3-button"
-          style="width: 25% !important;"
-          >GAMES</a
-        >
-        <a
-          href="http://www.binarynonsense.com/software"
-          class="w3-bar-item w3-button"
-          style="width: 25% !important;"
-          >SOFTWARE</a
-        >
-        <a
-          href="http://www.binarynonsense.com/projects"
-          class="w3-bar-item w3-button"
-          style="width: 25% !important;"
-          >OTHER</a
-        >
-        <a
-          href="http://blog.binarynonsense.com/"
-          target="_blank"
-          class="w3-bar-item w3-button"
-          style="width: 25% !important;"
-          >BLOG</a
-        >
-        <a
-          href="http://www.binarynonsense.com/about"
-          class="w3-bar-item w3-button"
-          style="width: 25% !important;"
-          >ABOUT</a
-        >
+    <div id="navbar">
+      <div class="topnav content" id="myTopnav">
+        <a href="../" class="logo"><img src="../imgs/logo.png" alt="" /></a>
+        <a href="../#contact">contact</a>
+        <a href="http://blog.binarynonsense.com/">blog</a>
+        <a href="../projects">other</a>
+        <a href="../software">software</a>
+        <a href="../art">art</a>
+        <a href="./" class="active">games</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
       </div>
     </div>
-
     <!-- Page Content -->
-    <div class="w3-padding-large" id="main">
-      <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-        <img
-          src="../imgs/bn_logo_120.png"
-          alt="binarynonsense"
-          class="w3-image"
-          width="120"
-          height="174"
-        />
-        <h1 class="w3-xxxlarge">GAMES</h1>
-      </header>
-
+    <div id="main">
       <div class="w3-content w3-justify w3-text-grey" id="about">
+        <!-- Header -->
+        <div class="w3-container w3-cell w3-mobile">
+          <img src="../imgs/header_illustration_he.jpg" class="w3-image" />
+        </div>
+
+        <div class="w3-container w3-cell w3-cell-middle w3-mobile">
+          <img src="../imgs/header_title_ag.jpg" class="w3-image" />
+          <h1 class="w3-text-light-grey" style="padding-left: 15px">GAMES</h1>
+        </div>
+        <!-- Content -->
         <div class="w3-row-padding w3-padding-16">
           <div class="w3-col l6 m6 w3-margin-bottom">
-            <h3 class="w3-text-light-grey">HIGH ENTROPY: CHALLENGES</h3>
+            <h3 class="w3-text-light-grey w3-left-align">
+              HIGH ENTROPY: CHALLENGES
+            </h3>
             <!--  <p class="w3-opacity">in development</p>  -->
             <p>
               Use computers (via GUIs or the command line), unlock doors, crawl
@@ -187,7 +87,7 @@
               <a
                 href="https://store.steampowered.com/app/1389630/High_Entropy_Challenges/"
                 target="_blank"
-                class="w3-button w3-black w3-border w3-block w3-border-grey linkbutton"
+                class="w3-button w3-green w3-block linkbutton"
                 ><i class="fa fa-info-circle"></i>&nbsp;&nbsp;More Info</a
               >
             </p>
@@ -195,7 +95,7 @@
               <a
                 href="https://www.youtube.com/watch?v=jPJzXlpfUXc"
                 target="_blank"
-                class="w3-button w3-black w3-border w3-block w3-border-grey linkbutton"
+                class="w3-button w3-green w3-block linkbutton"
                 ><i class="fab fa-youtube"></i>&nbsp;&nbsp;Trailer</a
               >
             </p>
@@ -211,7 +111,7 @@
               <a
                 href="https://store.steampowered.com/app/1389630/High_Entropy_Challenges/"
                 target="_blank"
-                class="w3-button w3-black w3-border w3-block w3-border-grey linkbutton"
+                class="w3-button w3-green w3-block linkbutton"
                 ><i class="fab fa-steam"></i>&nbsp;&nbsp;Download (Steam)</a
               >
             </p>
@@ -219,7 +119,7 @@
               <a
                 href="https://binarynonsense.itch.io/highentropy"
                 target="_blank"
-                class="w3-button w3-black w3-border w3-block w3-border-grey linkbutton"
+                class="w3-button w3-green w3-block linkbutton"
                 ><i class="fab fa-itch-io"></i>&nbsp;&nbsp;Download (itch)</a
               >
             </p>
@@ -230,39 +130,39 @@
             <img
               class="slidesEntropy"
               src="../imgs/screenshots/he_01.jpg"
-              style="width: 100%;"
+              style="width: 100%"
             />
             <img
               class="slidesEntropy"
               src="../imgs/screenshots/he_02.jpg"
-              style="width: 100%; display: none;"
+              style="width: 100%; display: none"
             />
             <img
               class="slidesEntropy"
               src="../imgs/screenshots/he_04.jpg"
-              style="width: 100%; display: none;"
+              style="width: 100%; display: none"
             />
             <img
               class="slidesEntropy"
               src="../imgs/screenshots/he_05.jpg"
-              style="width: 100%; display: none;"
+              style="width: 100%; display: none"
             />
             <img
               class="slidesEntropy"
               src="../imgs/screenshots/he_03.jpg"
-              style="width: 100%; display: none;"
+              style="width: 100%; display: none"
             />
             <img
               class="slidesEntropy"
               src="../imgs/screenshots/he_06.jpg"
-              style="width: 100%; display: none;"
+              style="width: 100%; display: none"
             />
             <div class="w3-row-padding w3-section">
               <div class="w3-col s4">
                 <img
                   class="dotsEntropy w3-opacity w3-hover-opacity-off"
                   src="../imgs/screenshots/he_01.jpg"
-                  style="width: 100%; cursor: pointer;"
+                  style="width: 100%; cursor: pointer"
                   onclick="currentDiv(1, 1)"
                 />
               </div>
@@ -270,7 +170,7 @@
                 <img
                   class="dotsEntropy w3-opacity w3-hover-opacity-off"
                   src="../imgs/screenshots/he_02.jpg"
-                  style="width: 100%; cursor: pointer;"
+                  style="width: 100%; cursor: pointer"
                   onclick="currentDiv(2, 1)"
                 />
               </div>
@@ -278,7 +178,7 @@
                 <img
                   class="dotsEntropy w3-opacity w3-hover-opacity-off"
                   src="../imgs/screenshots/he_04.jpg"
-                  style="width: 100%; cursor: pointer;"
+                  style="width: 100%; cursor: pointer"
                   onclick="currentDiv(3, 1)"
                 />
               </div>
@@ -288,7 +188,7 @@
                 <img
                   class="dotsEntropy w3-opacity w3-hover-opacity-off"
                   src="../imgs/screenshots/he_05.jpg"
-                  style="width: 100%; cursor: pointer;"
+                  style="width: 100%; cursor: pointer"
                   onclick="currentDiv(4, 1)"
                 />
               </div>
@@ -296,7 +196,7 @@
                 <img
                   class="dotsEntropy w3-opacity w3-hover-opacity-off"
                   src="../imgs/screenshots/he_03.jpg"
-                  style="width: 100%; cursor: pointer;"
+                  style="width: 100%; cursor: pointer"
                   onclick="currentDiv(5, 1)"
                 />
               </div>
@@ -304,7 +204,7 @@
                 <img
                   class="dotsEntropy w3-opacity w3-hover-opacity-off"
                   src="../imgs/screenshots/he_06.jpg"
-                  style="width: 100%; cursor: pointer;"
+                  style="width: 100%; cursor: pointer"
                   onclick="currentDiv(6, 1)"
                 />
               </div>
@@ -315,7 +215,7 @@
         <div class="w3-row-padding w3-padding-16">
           <!--  w3-grayscale  -->
           <div class="w3-col l6 m6 w3-margin-bottom">
-            <h3 class="w3-text-light-grey">HANDORU ISLAND</h3>
+            <h3 class="w3-text-light-grey w3-left-align">HANDORU ISLAND</h3>
             <!--  <p class="w3-opacity">in development</p>  -->
             <p>
               Drive trucks and vans to deliver trailers, crates and other cargo
@@ -329,7 +229,7 @@
               <a
                 href="https://binarynonsense.itch.io/handoru"
                 target="_blank"
-                class="w3-button w3-black w3-border w3-block w3-border-grey linkbutton"
+                class="w3-button w3-green w3-block linkbutton"
                 ><i class="fa fa-info-circle"></i>&nbsp;&nbsp;More Info</a
               >
             </p>
@@ -337,7 +237,7 @@
               <a
                 href="https://www.youtube.com/watch?v=_dksn0jkLGk"
                 target="_blank"
-                class="w3-button w3-black w3-border w3-block w3-border-grey linkbutton"
+                class="w3-button w3-green w3-block linkbutton"
                 ><i class="fab fa-youtube"></i>&nbsp;&nbsp;Gameplay Video</a
               >
             </p>
@@ -345,7 +245,7 @@
               <a
                 href="https://binarynonsense.itch.io/handoru#download"
                 target="_blank"
-                class="w3-button w3-black w3-border w3-block w3-border-grey linkbutton"
+                class="w3-button w3-green w3-block linkbutton"
                 ><i class="fa fa-download"></i>&nbsp;&nbsp;Download (Test
                 Build)</a
               >
@@ -358,39 +258,39 @@
             <img
               class="slidesHandoru"
               src="../imgs/screenshots/hi_01.jpg"
-              style="width: 100%;"
+              style="width: 100%"
             />
             <img
               class="slidesHandoru"
               src="../imgs/screenshots/hi_02.jpg"
-              style="width: 100%; display: none;"
+              style="width: 100%; display: none"
             />
             <img
               class="slidesHandoru"
               src="../imgs/screenshots/hi_03.jpg"
-              style="width: 100%; display: none;"
+              style="width: 100%; display: none"
             />
             <img
               class="slidesHandoru"
               src="../imgs/screenshots/hi_04.jpg"
-              style="width: 100%; display: none;"
+              style="width: 100%; display: none"
             />
             <img
               class="slidesHandoru"
               src="../imgs/screenshots/hi_05.jpg"
-              style="width: 100%; display: none;"
+              style="width: 100%; display: none"
             />
             <img
               class="slidesHandoru"
               src="../imgs/screenshots/hi_06.jpg"
-              style="width: 100%; display: none;"
+              style="width: 100%; display: none"
             />
             <div class="w3-row-padding w3-section">
               <div class="w3-col s4">
                 <img
                   class="dotsHandoru w3-opacity w3-hover-opacity-off"
                   src="../imgs/screenshots/hi_01.jpg"
-                  style="width: 100%; cursor: pointer;"
+                  style="width: 100%; cursor: pointer"
                   onclick="currentDiv(1, 0)"
                 />
               </div>
@@ -398,7 +298,7 @@
                 <img
                   class="dotsHandoru w3-opacity w3-hover-opacity-off"
                   src="../imgs/screenshots/hi_02.jpg"
-                  style="width: 100%; cursor: pointer;"
+                  style="width: 100%; cursor: pointer"
                   onclick="currentDiv(2, 0)"
                 />
               </div>
@@ -406,7 +306,7 @@
                 <img
                   class="dotsHandoru w3-opacity w3-hover-opacity-off"
                   src="../imgs/screenshots/hi_03.jpg"
-                  style="width: 100%; cursor: pointer;"
+                  style="width: 100%; cursor: pointer"
                   onclick="currentDiv(3, 0)"
                 />
               </div>
@@ -416,7 +316,7 @@
                 <img
                   class="dotsHandoru w3-opacity w3-hover-opacity-off"
                   src="../imgs/screenshots/hi_04.jpg"
-                  style="width: 100%; cursor: pointer;"
+                  style="width: 100%; cursor: pointer"
                   onclick="currentDiv(4, 0)"
                 />
               </div>
@@ -424,7 +324,7 @@
                 <img
                   class="dotsHandoru w3-opacity w3-hover-opacity-off"
                   src="../imgs/screenshots/hi_05.jpg"
-                  style="width: 100%; cursor: pointer;"
+                  style="width: 100%; cursor: pointer"
                   onclick="currentDiv(5, 0)"
                 />
               </div>
@@ -432,7 +332,7 @@
                 <img
                   class="dotsHandoru w3-opacity w3-hover-opacity-off"
                   src="../imgs/screenshots/hi_06.jpg"
-                  style="width: 100%; cursor: pointer;"
+                  style="width: 100%; cursor: pointer"
                   onclick="currentDiv(6, 0)"
                 />
               </div>
@@ -442,6 +342,17 @@
       </div>
       <!-- END PAGE CONTENT -->
     </div>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav content") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav content";
+        }
+      }
+    </script>
 
     <script>
       var slideIndex = [1, 1, 1];
@@ -474,37 +385,5 @@
         dots[slideIndex[no] - 1].className += " w3-opacity-off";
       }
     </script>
-
-    <!-- Start of StatCounter Code for Default Guide -->
-    <script type="text/javascript">
-      var sc_project = 3337120;
-      var sc_invisible = 1;
-      var sc_security = "b64cb0f2";
-      var sc_client_storage = "disabled";
-      var scJsHost =
-        "https:" == document.location.protocol
-          ? "https://secure."
-          : "http://www.";
-      document.write(
-        "<sc" +
-          "ript type='text/javascript' src='" +
-          scJsHost +
-          "statcounter.com/counter/counter.js'></" +
-          "script>"
-      );
-    </script>
-    <noscript
-      ><div class="statcounter">
-        <a
-          title=""
-          href="http://statcounter.com/free-hit-counter/"
-          target="_blank"
-          ><img
-            class="statcounter"
-            src="//c.statcounter.com/3337120/0/b64cb0f2/1/"
-            alt=""
-        /></a></div
-    ></noscript>
-    <!-- End of StatCounter Code for Default Guide -->
   </body>
 </html>

@@ -14,92 +14,45 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <!-- <link href="../fonts/css/all.css" rel="stylesheet"> local fontawesome -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="stylesheet" href="../css/style.css" />
 
-<style>
-body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-.w3-row-padding img {margin-bottom: 12px}
-/* Set the width of the sidebar to 120px */
-.w3-sidebar {width: 120px;background: #222;}
-/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-#main {margin-left: 120px}
-/* Remove margins from "page content" on small screens */
-@media only screen and (max-width: 600px) {#main {margin-left: 0}}
-</style>
-<style>
-.mySlides {display:none;}
-
-.w3-third img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}
-.w3-third img:hover{opacity: 1}
-
-.linkbutton, .linkbutton2
-{
-    font-family: 'Inconsolata';
-    text-transform: lowercase;
-    color: grey !important;
-}
-.linkbutton i
-{
- display: inline-block; 
- vertical-align: middle;
-}
-</style>
 <body class="w3-black">
-
-<!-- Icon Bar (Sidebar - hidden on small screens) -->
-<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-    <a href="../games" class="w3-bar-item w3-button w3-padding-small w3-hover-black">
-      <i class="fa fa-gamepad w3-xlarge" style="padding-top: 10px;"></i>
-      <p>GAMES</p>
-    </a>
-     <a href="../software" class="w3-bar-item w3-button w3-padding-small w3-hover-black">
-      <i class="fas fa-save w3-xlarge" style="padding-top: 10px;"></i>
-      <p>SOFTWARE</p>
-    </a>
-    <a href="./" class="w3-bar-item w3-button w3-padding-small w3-black">
-      <i class="fa fa-archive w3-xlarge" style="padding-top: 10px;"></i>
-      <p>OTHER</p>
-    </a>
-     <a href="http://blog.binarynonsense.com/" class="w3-bar-item w3-button w3-padding-small w3-hover-black">
-      <i class="fa fa-pencil-alt w3-xlarge" style="padding-top: 10px;"></i>
-      <p>BLOG</p>
-    </a>
-    <a href="../about" class="w3-bar-item w3-button w3-padding-small w3-hover-black">
-      <i class="fa fa-user w3-xlarge" style="padding-top: 10px;"></i>
-      <p>ABOUT</p>
-    </a>
-  </nav>
-
-<!-- Navbar on small screens (Hidden on medium and large screens) -->
-<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <!-- <a href="http://www.binarynonsense.com/" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>  -->
-    <a href="http://www.binarynonsense.com/games" class="w3-bar-item w3-button" style="width:25% !important">GAMES</a>
-    <a href="http://www.binarynonsense.com/software" class="w3-bar-item w3-button" style="width:25% !important">SOFTWARE</a>
-    <a href="http://www.binarynonsense.com/projects" class="w3-bar-item w3-button" style="width:25% !important">OTHER</a>
-    <a href="http://blog.binarynonsense.com/" target="_blank" class="w3-bar-item w3-button" style="width:25% !important">BLOG</a> 
-    <a href="http://www.binarynonsense.com/about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
-  </div>
-</div>
-
-<!-- Page Content -->
-<div class="w3-padding-large" id="main">
-
- <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-  <img src="../imgs/bn_logo_120.png" alt="binarynonsense" class="w3-image" width="120" height="174">
-    <h1 class="w3-xxxlarge">OTHER PROJECTS</h1>
-     <div class="w3-container w3-padding-16 w3-center">
-        <div class="w3-bar">
-        <a href="#prototypes" class="w3-bar-item w3-button">Game Prototypes</a>
-        <a href="#software" class="w3-bar-item w3-button">Software Prototypes</a>
-        <a href="#art" class="w3-bar-item w3-button">Graphic Art</a>
+    <div id="navbar">
+        <div class="topnav content" id="myTopnav">
+          <a href="../" class="logo"><img src="../imgs/logo.png" alt="" /></a>
+          <a href="../#contact">contact</a>
+          <a href="http://blog.binarynonsense.com/">blog</a>
+          <a href="./" class="active">other</a>
+          <a href="../software">software</a>
+          <a href="../art">art</a>
+          <a href="../games">games</a>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
         </div>
-    </div>
-  </header> 
+      </div>
+<!-- Page Content -->
+<div id="main">
   
   <div class="w3-content w3-justify w3-text-grey" id="about">
+       <!-- Header -->
+       <div class="w3-container w3-cell w3-mobile">
+        <img src="../imgs/header_illustration_he.jpg" class="w3-image" />
+      </div>
+
+      <div class="w3-container w3-cell w3-cell-middle w3-mobile">
+        <img src="../imgs/header_title_ag.jpg" class="w3-image" />
+        <h1 class="w3-text-light-grey" style="padding-left: 15px">OTHER PROJECTS</h1>
+      </div>
+      <!-- Content -->
     
+      <div class="w3-container w3-padding-16 w3-center">
+        <div class="w3-bar">
+        <a href="#prototypes" class="w3-bar-item w3-button w3-green">Game Prototypes</a>
+        <a href="#software" class="w3-bar-item w3-button w3-green w3-margin-left">Software Prototypes</a>
+        </div>
+    </div>
     <a id="prototypes"></a><h2>Game Prototypes</h2>
     <!-- <hr style="width:100%" class="w3-opacity-max"> -->
 
@@ -108,10 +61,10 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
         <h3 class="w3-text-light-grey">SOLITAIRE PROJECT</h3>
         <!--  <p class="w3-opacity">in development</p>  -->
         <p>A small game inspired by golf solitaire and similar games like Faerie Solitaire.</p>
-        <p><a href="https://binarynonsense.itch.io/solitaire" target="_blank" class="w3-button w3-black w3-border w3-block w3-border-grey linkbutton"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;More Info</a></p>
-        <p><a href="https://www.youtube.com/watch?v=LZpXO_plts4" target="_blank" class="w3-button w3-black w3-border w3-block w3-border-grey linkbutton"><i class="fab fa-youtube"></i>&nbsp;&nbsp;Gameplay Video</a></p>        
-        <p><a href="https://binarynonsense.itch.io/solitaire" target="_blank" class="w3-button w3-black w3-border w3-block w3-border-grey linkbutton"><i class="fa fa-gamepad"></i>&nbsp;&nbsp;Play Online</a></p>
-        <p><a href="https://binarynonsense.itch.io/solitaire#download" target="_blank" class="w3-button w3-black w3-border w3-block w3-border-grey linkbutton"><i class="fa fa-download"></i>&nbsp;&nbsp;Download</a></p>
+        <p><a href="https://binarynonsense.itch.io/solitaire" target="_blank" class="w3-button w3-green w3-block linkbutton"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;More Info</a></p>
+        <p><a href="https://www.youtube.com/watch?v=LZpXO_plts4" target="_blank" class="w3-button w3-green w3-block linkbutton"><i class="fab fa-youtube"></i>&nbsp;&nbsp;Gameplay Video</a></p>        
+        <p><a href="https://binarynonsense.itch.io/solitaire" target="_blank" class="w3-button w3-green w3-block linkbutton"><i class="fa fa-gamepad"></i>&nbsp;&nbsp;Play Online</a></p>
+        <p><a href="https://binarynonsense.itch.io/solitaire#download" target="_blank" class="w3-button w3-green w3-block linkbutton"><i class="fa fa-download"></i>&nbsp;&nbsp;Download</a></p>
         </div>   
         <div class="w3-col l6 m6 w3-margin-bottom w3-padding-large w3-margin-top">
             <img class="slidesSolitaire" src="../imgs/screenshots/solitaire_01.jpg" style="width:100%">
@@ -136,9 +89,9 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
             <h3 class="w3-text-light-grey">CITY PROJECT</h3>
             <!-- <p class="w3-opacity">Last updated: 19 April 2012</p>  -->
             <p>My main goals for this project were learning how a 3D game was made from the ground up (not using an already made engine) and improving my programming skills, while creating a 'proof of concept' demo showing what I had accomplished, and could do, in the process.</p> <p>  I created it using DirectX 9.0c for the graphics, Bullet Physics as the physics engine and OpenAL for the sound.</p>
-            <p><a href="https://www.youtube.com/watch?v=13oEmJQ9NSw" target="_blank" class="w3-button w3-black w3-border w3-block w3-border-grey linkbutton"><i class="fab fa-youtube"></i>&nbsp;&nbsp;Video</a></p>
-            <p><a href="http://blog.binarynonsense.com/categories/#city-project" target="_blank" class="w3-button w3-black w3-border w3-block w3-border-grey linkbutton2"><i class="fa fa-pencil-alt"></i>&nbsp;&nbsp;Devlog</a></p>
-            <p><a href="http://www.indiedb.com/games/city-project/downloads/city-project-proof-of-concept-demo" target="_blank" class="w3-button w3-black w3-border w3-block w3-border-grey linkbutton2"><i class="fa fa-download"></i>&nbsp;&nbsp;Download</a></p>
+            <p><a href="https://www.youtube.com/watch?v=13oEmJQ9NSw" target="_blank" class="w3-button w3-green w3-block linkbutton"><i class="fab fa-youtube"></i>&nbsp;&nbsp;Video</a></p>
+            <p><a href="http://blog.binarynonsense.com/categories/#city-project" target="_blank" class="w3-button w3-green w3-block linkbutton2"><i class="fa fa-pencil-alt"></i>&nbsp;&nbsp;Devlog</a></p>
+            <p><a href="http://www.indiedb.com/games/city-project/downloads/city-project-proof-of-concept-demo" target="_blank" class="w3-button w3-green w3-block linkbutton2"><i class="fa fa-download"></i>&nbsp;&nbsp;Download</a></p>
         </div>   
         <div class="w3-col l6 m6 w3-margin-bottom w3-padding-large w3-margin-top">
             <img class="slidesCity" src="../imgs/screenshots/city_01.jpg" style="width:100%;display:none">
@@ -163,7 +116,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
             <h3 class="w3-text-light-grey">RAY CASTER ADVENTURES</h3>
             <!-- <p class="w3-opacity">Last updated: 24 sep 2009</p>  -->
             <p>I enjoyed a lot playing Wolfenstein 3D and, even more, Doom years ago (I even enjoy playing them nowadays). Since then, the First Person Shooter genre is probably my favorite, and I always wanted to learn how John Carmack, John Romero and the guys from iD Software made those great games, and make one myself.</p><p>This is a game prototype I programmed using a technique from those early days called ray-casting.</p>
-            <p><a href="https://www.youtube.com/watch?v=DIQtsdn9mPk" target="_blank" class="w3-button w3-black w3-border w3-block w3-border-grey linkbutton"><i class="fab fa-youtube"></i>&nbsp;&nbsp;Video</a></p>
+            <p><a href="https://www.youtube.com/watch?v=DIQtsdn9mPk" target="_blank" class="w3-button w3-green w3-block linkbutton"><i class="fab fa-youtube"></i>&nbsp;&nbsp;Video</a></p>
         </div>   
         <div class="w3-col l6 m6 w3-margin-bottom w3-padding-large w3-margin-top">
             <!--  <img src="../imgs/handoruisland.png" alt="high entropy" style="width:100%"> -->
@@ -188,7 +141,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
         <div class="w3-col l6 m6 w3-margin-bottom">
             <h3 class="w3-text-light-grey">MaRTE OS GAMES</h3>
             <p>Some small games I made for MaRTE OS, a Hard Real-Time Operating System for embedded applications developed in the Group of Computers and Real-Time of the University of Cantabria.</p>
-            <p><a href="https://www.youtube.com/playlist?list=PL32A934F67ACB2F7C" target="_blank" class="w3-button w3-black w3-border w3-block w3-border-grey linkbutton"><i class="fab fa-youtube"></i>&nbsp;&nbsp;Videos</a></p>
+            <p><a href="https://www.youtube.com/playlist?list=PL32A934F67ACB2F7C" target="_blank" class="w3-button w3-green w3-block linkbutton"><i class="fab fa-youtube"></i>&nbsp;&nbsp;Videos</a></p>
         </div>   
         <div class="w3-col l6 m6 w3-margin-bottom w3-padding-large w3-margin-top">
             <img class="slidesMarte" src="../imgs/screenshots/marte_03.jpg" style="width:100%;display:none">
@@ -217,7 +170,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
             <!-- <p class="w3-opacity">Last updated: 2009</p> -->
             <p><em>ALOS</em> was one of my pet projects for some time: developing a simple operative system in order to learn more about computers. There are some great tutorials in the internet that helped me begin, like <a href='http://www.jamesmolloy.co.uk/tutorial_html/index.html' target="_blank">JamesM's</a> and <a href='http://www.osdever.net/bkerndev/index.php' target="_blank">Brandon F's</a>, and really helpful communities like <a href='http://wiki.osdev.org/Main_Page' target="_blank">OSDev.org</a>. It also helped reading the amazing <a href='http://sos.enix.org/fr/PagePrincipale' target="_blank">series of articles</a> published in Linux Magazine describing the creation of the SOS operative system.</p>
             <p>Current state: I programmed a simple command line interface and made a very basic VGA driver (not finished).</p>      
-            <p><a href="https://www.youtube.com/watch?v=4JsgIdO43SU" target="_blank" class="w3-button w3-black w3-border w3-block w3-border-grey linkbutton"><i class="fab fa-youtube"></i>&nbsp;&nbsp;Video</a></p>
+            <p><a href="https://www.youtube.com/watch?v=4JsgIdO43SU" target="_blank" class="w3-button w3-green w3-block linkbutton"><i class="fab fa-youtube"></i>&nbsp;&nbsp;Video</a></p>
         </div>   
         <div class="w3-col l6 m6 w3-margin-bottom w3-padding-large w3-margin-top">
             <img src="../imgs/screenshots/alos_01.jpg" style="width:100%">
@@ -232,8 +185,8 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
             <p>Description: <a href='http://mast.unican.es/umlmast/marte2mast/index.html'>Marte2Mast</a>'s main goal was to generate a MAST text model from a UML-MARTE schedulability analysis input model, but it was extended to, if the user chooses so, invoke MAST to analyze the generated model and create a new version of the original UML model updated with the output data from MAST.</p>
             <p>It was delivered as an Eclipse plugin, and implemented using the Eclipse technologies provided by Papyrus UML as graphical tool, the UML2 plugin as model repository, and the Acceleo plugin for the extraction of text from the UML2 models plus a significant amount of Java custom code.</p>
             <p>The source code is also provided, under the GPL v2 license.</p>   
-            <p><a href="http://www.youtube.com/watch?v=1Tzg2cQsM5o" target="_blank" class="w3-button w3-black w3-border w3-block w3-border-grey linkbutton"><i class="fab fa-youtube"></i>&nbsp;&nbsp;Video</a></p>
-            <p><a href="http://mast.unican.es/umlmast/marte2mast/index.html" target="_blank" class="w3-button w3-black w3-border w3-block w3-border-grey linkbutton"><i class="fa fa-link"></i>&nbsp;&nbsp;Website</a></p>
+            <p><a href="http://www.youtube.com/watch?v=1Tzg2cQsM5o" target="_blank" class="w3-button w3-green w3-block linkbutton"><i class="fab fa-youtube"></i>&nbsp;&nbsp;Video</a></p>
+            <p><a href="http://mast.unican.es/umlmast/marte2mast/index.html" target="_blank" class="w3-button w3-green w3-block linkbutton"><i class="fa fa-link"></i>&nbsp;&nbsp;Website</a></p>
         </div>   
         <div class="w3-col l6 m6 w3-margin-bottom w3-padding-large w3-margin-top">
             <img src="../imgs/screenshots/marte2mast.jpg" style="width:100%">
@@ -245,7 +198,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
             <h3 class="w3-text-light-grey">RTDVIEWER</h3>
             <!-- <p class="w3-opacity">Last updated: 2011</p> -->
            <p>This is a program I made at home in my spare time to view the reports generated by a commercial tool I was using at work. The tool already provided its own report viewer, much more complete than mine, so there was no need for me to create one, I just did it as an excuse to learn some new skills. rtdViewer is programmed in c# running on mono and using GTK# to create the GUI and Cairo for the graphics.</p>   
-            <p><a href="http://www.youtube.com/watch?v=JoVhgozh-Hw" target="_blank" class="w3-button w3-black w3-border w3-block w3-border-grey linkbutton"><i class="fab fa-youtube"></i>&nbsp;&nbsp;Video</a></p>
+            <p><a href="http://www.youtube.com/watch?v=JoVhgozh-Hw" target="_blank" class="w3-button w3-green w3-block linkbutton"><i class="fab fa-youtube"></i>&nbsp;&nbsp;Video</a></p>
         </div>   
         <div class="w3-col l6 m6 w3-margin-bottom w3-padding-large w3-margin-top">
             <img src="../imgs/screenshots/rtdviewer.jpg" style="width:100%">
@@ -256,46 +209,12 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
         <div class="w3-col l6 m6 w3-margin-bottom">
             <h3 class="w3-text-light-grey">YONAS CMS</h3>
            <p>Yonas CMS is a content management system (CMS) I made years ago, while learning PHP. It was programmed using PHP 5, SQLite, Javascript and AJAX.</p>   
-            <p><a href="https://www.youtube.com/watch?v=nJu0Q-5-bjI" target="_blank" class="w3-button w3-black w3-border w3-block w3-border-grey linkbutton"><i class="fab fa-youtube"></i>&nbsp;&nbsp;Video</a></p>
+            <p><a href="https://www.youtube.com/watch?v=nJu0Q-5-bjI" target="_blank" class="w3-button w3-green w3-block linkbutton"><i class="fab fa-youtube"></i>&nbsp;&nbsp;Video</a></p>
         </div>   
         <div class="w3-col l6 m6 w3-margin-bottom w3-padding-large w3-margin-top">
             <img src="../imgs/screenshots/yonascms.jpg" style="width:100%">
         </div>
-    </div>     
-    
-    <a id="art"></a><h2>Graphic Art</h2>
-    <!-- <hr style="width:100%" class="w3-opacity-max"> --> 
-    
-     <div class="w3-row-padding w3-padding-16">     <!--  w3-grayscale  -->
-        <div class="w3-col l6 m6 w3-margin-bottom">
-        <h3 class="w3-text-light-grey">ARTSTATION PORTFOLIO</h3>
-        <!--  <p class="w3-opacity">in development</p>  -->
-        <p>I plan to add a section for my artwork here some day, in the meantime you can visit my portfolio on artstation to see some of my illustrations: <a href="https://binarynonsense.artstation.com/" target="_blank" >https://binarynonsense.artstation.com/</a></p>
-        </div> 
-    </div>
-    <!--
-    <div class="w3-row-padding w3-padding-16">
-        <div class="w3-container w3-third">
-            <img src="../imgs/portfolio/thumb_marteos_400x225.jpg" alt="../imgs/portfolio/marteos_alvarogarcia.jpg" style="width:100%" onclick="onClickGallery(this, 'modal_marteos')">
-        </div>
-        <div class="w3-container w3-third">
-            <img src="../imgs/portfolio/thumb_8000millas_cover.jpg" alt="../imgs/portfolio/8000millas_cover_600px.jpg" style="width:100%" onclick="onClickGallery(this, 'modal_8000millas')">
-        </div>
-        <div class="w3-container w3-third">
-            <img src="../imgs/portfolio/thumb_gnulinux_400x225.jpg" alt="../imgs/portfolio/gnu_linux_alvarogarcia.jpg" style="width:100%" onclick="onClickGallery(this, 'modal_gnulinux')">
-        </div>
-    </div>
-    
-    <div class="w3-row-padding w3-padding-16">
-        <div class="w3-container w3-third">
-            <img src="../imgs/portfolio/thumb_piratas_cover.jpg" alt="../imgs/portfolio/piratas_cover_600px.jpg" style="width:100%" onclick="onClickGallery(this, 'modal_piratas')">
-        </div>        
-        <div class="w3-container w3-third">
-            <img src="../imgs/portfolio/thumb_batidora_400x225.jpg" alt="../imgs/portfolio/batidoradigital_tshirt_design_alvarogarcia.jpg" style="width:100%" onclick="onClickGallery(this, 'modal_batidora')">
-        </div>
-        
-    </div> 
-    -->
+    </div>    
     
     <!-- Custom Modals-->
     <div id="modal_marteos" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
