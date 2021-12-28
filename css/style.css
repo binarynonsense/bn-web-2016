@@ -1,6 +1,17 @@
 #navbar {
   background-color: #4f8c47;
 }
+
+#footer {
+  background-color: #4f8c47;
+  width: 100%;
+  color: #f2f2f2;
+}
+
+#footer a {
+  color: #f2f2f2;
+}
+
 .content {
   max-width: 1000px;
   margin: auto;
