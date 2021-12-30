@@ -31,3 +31,36 @@
 .grid > div a img {
   width: 100%;
 }
+
+.gridImageContainer {
+  position: relative;
+}
+
+.gridImageText {
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.541);
+  color: rgb(255, 255, 255);
+  padding: 5px;
+}
+
+.grid > div a:hover .gridImageText {
+  display: block;
+}
+
+.gridDisplayNone {
+  display: none;
+}
+
+.gridDisplayBlock {
+  display: block;
+}
+
+.gridTruncateText {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
