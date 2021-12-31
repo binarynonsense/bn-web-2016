@@ -40,6 +40,8 @@ let g_padEnabled = false;
 function initPad() {
   g_padEnabled = true;
 
+  document.getElementById("svgPad").style.display = "block";
+
   document.getElementById("padArrowUp").addEventListener("click", function () {
     enterCodeKey("38");
   });

@@ -173,6 +173,10 @@ h6 {
 
 /* PAD */
 
+.svgHide {
+  display: none;
+}
+
 .svgFillNormal {
   fill: rgb(41, 41, 41);
 }
