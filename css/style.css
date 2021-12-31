@@ -170,3 +170,19 @@ h6 {
   /* doesnt work! :(*/
   overflow: hidden !important;
 }
+
+/* PAD */
+
+.svgFillNormal {
+  fill: rgb(41, 41, 41);
+}
+
+.svgFillHighlight {
+  fill: rgb(139, 26, 26);
+}
+
+.svgStrokeNormal {
+  stroke: rgb(41, 41, 41);
+}
+
+/* remember, add pointer-events: none; to svg label groups*/
