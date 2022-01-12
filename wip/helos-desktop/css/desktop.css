@@ -1,0 +1,299 @@
+/* * {
+  margin: 0;
+  padding: 0;
+} */
+
+body {
+  background-color: #000000;
+}
+
+#remoteDesktopMsg {
+  position: absolute;
+  top: 620px;
+  color: white;
+  font-size: 10px;
+}
+#remoteDesktopMsg p:first-of-type {
+  color: yellow;
+  font-size: 14px;
+}
+#remoteDesktopMsgVersion {
+  color: white;
+  opacity: 0.5;
+  font-size: 10px;
+}
+
+#screen {
+  width: 800px;
+  height: 600px;
+  font-family: "Roboto", sans-serif;
+  right: 50%;
+  bottom: 100%;
+  transform: translate(50%, 101%);
+  position: absolute;
+}
+
+#desktop {
+  background-color: #008282;
+  padding: 5px;
+  width: 800px;
+  height: 580px;
+  pointer-events: auto;
+}
+
+#taskbar {
+  background-color: #c3c3c3;
+  border-top: 1px white solid;
+  width: 805px;
+  height: 22px;
+  user-select: none;
+  display: flex;
+  padding-left: 5px;
+}
+
+#taskbarList {
+  width: 700px;
+  height: 20px;
+  display: flex;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+
+.taskbarButton {
+  height: 17px;
+  width: 150px;
+  max-width: 150px;
+  background-color: #bbbbbb;
+  font-size: 13px;
+  padding: 1px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 2px;
+  border: 1px solid white;
+  border-bottom: 1px solid #828282;
+  border-right: 1px solid #828282;
+  color: #010303c2;
+  overflow: hidden;
+  /* align text vertically*/
+  display: flex;
+  justify-content: left;
+  align-content: center;
+  flex-direction: row;
+  font-weight: lighter;
+}
+
+.taskbarButton:hover {
+  background-color: #c9c9c9;
+}
+
+.taskbarButton img {
+  height: 16px;
+  margin-right: 5px;
+}
+
+.taskbarButtonText {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.taskbarActiveButton {
+  border: 1px solid #828282;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  background-color: transparent;
+  background-image: url("../imgs/taskbg.png");
+  background-repeat: repeat-x;
+  background-size: contain;
+  font-weight: bold;
+  color: #000000ab;
+}
+
+#taskbarClock {
+  width: 55px;
+  height: 16px;
+  background-color: #bbbbbb;
+  text-align: center;
+  font-size: 12px;
+  padding: 1px;
+  padding-top: 2px;
+  margin-right: 3px;
+  border: 1px solid #828282;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  color: 010303;
+  user-select: none;
+  /* align text vertically*/
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+
+  margin-left: auto;
+  order: 2;
+}
+
+#taskbarClock img {
+  height: 13px;
+  margin-right: 3px;
+}
+
+#osLogo:hover {
+  background-color: #dadada;
+}
+
+.window {
+  background-color: #c3c3c3;
+  border: 1px solid #fff;
+  border-right: 1px solid #828282;
+  border-bottom: 1px solid #828282;
+  padding: 2px;
+  position: absolute;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.windowTitle {
+  height: 25px;
+  background-color: #7f787f;
+  color: #bfb8bf;
+  font-size: 12px;
+  padding-left: 3px;
+  margin-bottom: 3px;
+  /* align text vertically*/
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+.windowTitleFocused {
+  background-color: #000082;
+  color: white;
+}
+
+.windowTitle img {
+  height: 16px;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+.windowTitleButton {
+  color: black;
+  font-size: 9px;
+  height: 12px;
+  width: 12px;
+  background-color: #c3c3c3;
+  border: 1px solid #fff;
+  border-right: 1px solid #828282;
+  border-bottom: 1px solid #828282;
+  float: right;
+  margin-right: 3px;
+  text-align: center;
+  /* align text vertically*/
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+.windowTitleButton:hover {
+  background-color: #e2e2e2;
+}
+.windowTitleButton:active {
+  border: 1px solid #828282;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+/* .windowContent {
+  background-color: rgb(139, 20, 20);
+} */
+
+.windowContentTXT {
+  background-color: white;
+  padding: 10px;
+  padding-top: 0px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 13px;
+  overflow-y: scroll;
+}
+
+.windowContentTXT pre {
+  display: block;
+  word-wrap: normal;
+  width: 100%;
+  white-space: break-spaces;
+}
+
+/* .shortcuts {
+  width: 55px;
+  margin-top: 10px;
+  margin-left: 10px;
+} */
+
+.shortcut {
+  text-align: center;
+  width: 70px;
+  min-height: 50px;
+  color: white;
+  font-size: 12px;
+  margin-bottom: 15px;
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 3px;
+  position: absolute;
+}
+.shortcut:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.shortcutFocused {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.shortcutIcon {
+  display: block;
+  margin: auto;
+  margin-bottom: 8px;
+  width: 30px;
+  height: 30px;
+}
+
+.shortcutArrow {
+  position: absolute;
+  top: 23px;
+  left: 20px;
+}
+
+/* #terminalContainer {
+  height: 300px;
+} */
+
+.aboutContent {
+  float: right;
+  width: 100%;
+  padding: 10px;
+}
+.aboutRight {
+  float: right;
+  width: 270px;
+  font-size: 13px;
+  opacity: 0.85;
+  overflow: hidden;
+}
+.aboutLeft {
+  float: left;
+  width: 125px;
+  margin-left: 20px;
+}
+
+/* terminal *********************/
+
+.terminal {
+  --size: 1;
+}
+
+.terminal {
+  scrollbar-color: #c3c3c3 #000000;
+  scrollbar-width: auto !important;
+}
