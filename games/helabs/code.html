@@ -50,17 +50,22 @@
       </p>
     </div>
 
-    <script type="text/javascript">
-        // var str = "";
-        // str = window.btoa(str);
-        // str = window.atob(str);
-        // alert(str);
+    <script type="text/javascript">        
         function CheckCode() {
             var val = document.getElementById('val').value;
+
+            // console.log(window.btoa(val));
+            // console.log(window.atob(window.btoa(val)));    
+            // return false;   
+
             if (val == "about") {
-                //window.location.href = window.atob("");
                 window.location.href = "./about.html";
                 return false;
+            }
+            else if(window.btoa(val) == "MjNIVFA1")
+            {
+              window.location.href = `./rd/${val}.html`;
+              return false;
             } else {
                 window.location.href = "./wrongcode.html";
                 return false;

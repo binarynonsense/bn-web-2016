@@ -9,3 +9,9 @@ body {
   max-width: 800px;
   margin: auto;
 }
+
+.guestbookComment {
+  border: 2px grey solid;
+  padding: 10px;
+  margin-bottom: 10px;
+}
