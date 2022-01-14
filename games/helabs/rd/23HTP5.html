@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HEL OS Remote Desktop</title>
+
+    <meta charset="UTF-8" />
+    <meta name="author" content="Alvaro Garcia C - www.binarynonsense.com" />
+    <meta
+      name="description"
+      content="Binary Nonsense - Website and Portfolio of Álvaro García"
+    />
+    <meta
+      name="keywords"
+      content="Alvaro,Garcia,portfolio,art,programming,illustration, game, gamedev"
+    />
+
+    <script src="./common/js/external/jquery.min.js"></script>
+    <script src="./common/js/external/jquery.terminal.min.js"></script>
+    <link rel="stylesheet" href="./common/css/external/jquery.terminal.css" />
+    <script src="./common/js/external/three.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./common/css/desktop.css" />
+    <link rel="stylesheet" href="./common/css/apps/mines.css" />
+  </head>
+  <body>
+    <div id="screen">
+      <div id="desktop">
+        <div id="shortcuts"></div>
+        <div id="windows"></div>
+      </div>
+      <div id="taskbar">
+        <img id="osLogo" src="./common/imgs/hellogo.gif" alt="" />
+        <div id="taskbarList"></div>
+        <div id="taskbarClock">
+          <img src="./common/imgs/soundoff_ico.png" alt="" /><span
+            id="taskbarClockText"
+            >00:00</span
+          >
+        </div>
+        <div id="remoteDesktopMsg">
+          <p>
+            HEL OS Remote Desktop
+            <span id="remoteDesktopMsgVersion">v0.1c</span>
+          </p>
+          <p>id: 23HTP5 | local ip: 10.5.0.32 | res: 800x600</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="./common/js/apps/3d.js"></script>
+    <script src="./23HTP5/main.js" type="module"></script>
+  </body>
+</html>
