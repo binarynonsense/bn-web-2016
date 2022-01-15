@@ -2,6 +2,10 @@
   background-color: #4f8c47;
 }
 
+.forceblueBG {
+  background-color: #435992 !important;
+}
+
 #footer {
   background-color: #4f8c47;
   width: 100%;
@@ -111,6 +115,21 @@ a:hover {
 
 .linkbuttonColor {
   color: #f2f2f2 !important;
+}
+
+.iframe-container {
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+}
+
+.iframe-container iframe {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 body,
