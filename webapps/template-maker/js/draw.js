@@ -11,142 +11,96 @@ import { HeaderRect as HeaderRect } from "./header-rect.js";
 
 import { showLoading } from "./loading.js";
 
-let g_canvas;
+let g_compositeCanvas;
 
-export function initCanvas() {
-  g_canvas = document.createElement("canvas");
-  g_canvas.id = "hidden-canvas";
+export function initRenderer() {
+  g_compositeCanvas = document.createElement("canvas");
+  g_compositeCanvas.id = "hidden-canvas";
 }
 
-export function getCanvas() {
-  return g_canvas;
+export function getCompositeCanvas() {
+  return g_compositeCanvas;
 }
 
-export function drawTemplate() {
+function updatePreviewImage() {
+  document.getElementById("result-img").src = g_compositeCanvas.toDataURL();
+}
+
+export function drawCompositeImage() {
   showLoading(true);
   // set timeout so loading spinner can show
   setTimeout(() => {
-    const makeDoublePage =
-      document.getElementById("layout-spread-select").value === "double"
-        ? true
-        : false;
-    let renderedPageData = drawCanvas(makeDoublePage);
-    if (document.getElementById("layout-template-select").value === "page") {
-      if (
-        document.getElementById("layout-page-paper-select").value === "header"
-      ) {
-        // paper size = header area size
-        document.getElementById("result-img").src = g_canvas.toDataURL();
-        showLoading(false);
-      } else {
-        // a4 210 mm x 297 mm
-        let paperWidth = 8.27;
-        let paperHeight = 11.69;
-        if (
-          document.getElementById("layout-page-paper-select").value === "us"
-        ) {
-          paperWidth = 8.5;
-          paperHeight = 11;
-        } else if (
-          document.getElementById("layout-page-paper-select").value === "b4"
-        ) {
-          paperWidth = 10.12;
-          paperHeight = 14.33;
-        } //257 x 364 mm
-        else if (
-          document.getElementById("layout-page-paper-select").value === "11x17"
-        ) {
-          paperWidth = 11;
-          paperHeight = 17;
-        }
-        let image = new Image();
-        image.onload = function () {
-          g_canvas.width = paperWidth * renderedPageData.ppi;
-          g_canvas.height = paperHeight * renderedPageData.ppi;
-          const doScale =
-            document.getElementById("layout-page-scaling-select").value ===
-            "scale"
-              ? true
-              : false;
-          let pageWidth = renderedPageData.width;
-          let pageHeight = renderedPageData.height;
-          if (doScale) {
-            const widthRatio = g_canvas.width / pageWidth;
-            const heightRatio = g_canvas.height / pageHeight;
-            const ratio = widthRatio < heightRatio ? widthRatio : heightRatio;
-            pageWidth = ratio * pageWidth;
-            pageHeight = ratio * pageHeight;
-          }
-          const gapX = g_canvas.width - pageWidth;
-          const gapY = g_canvas.height - pageHeight;
-          // draw the image
-          const ctx = g_canvas.getContext("2d");
-          ctx.fillStyle = "white";
-          ctx.fillRect(0, 0, g_canvas.width, g_canvas.height);
-          ctx.drawImage(this, gapX / 2, gapY / 2, pageWidth, pageHeight);
-
-          document.getElementById("result-img").src = g_canvas.toDataURL();
-          showLoading(false);
-        };
-        image.src = g_canvas.toDataURL();
-      }
-    } else {
-      let paperWidth = 8.3;
-      let paperHeight = 11.7;
-      if (
-        document.getElementById("layout-thumbnails-paper-select").value === "us"
-      ) {
-        paperWidth = 8.5;
-        paperHeight = 11;
-      }
-      const numThumbsX = document.getElementById(
-        "layout-thumbnails-columns-input"
-      ).value;
-      const numThumbsY = document.getElementById(
-        "layout-thumbnails-rows-input"
-      ).value;
-      let image = new Image();
-      image.onload = function () {
-        g_canvas.width = paperWidth * renderedPageData.ppi;
-        g_canvas.height = paperHeight * renderedPageData.ppi;
-        const pageWidth = renderedPageData.width;
-        const pageHeight = renderedPageData.height;
-        const thumbWidthRatio = g_canvas.width / numThumbsX / pageWidth;
-        const thumbHeightRatio = g_canvas.height / numThumbsY / pageHeight;
-        const thumbRatio =
-          thumbWidthRatio < thumbHeightRatio
-            ? thumbWidthRatio
-            : thumbHeightRatio;
-        const thumbWidth = thumbRatio * pageWidth;
-        const thumbHeight = thumbRatio * pageHeight;
-        const gapX = g_canvas.width - thumbWidth * numThumbsX;
-        const gapY = g_canvas.height - thumbHeight * numThumbsY;
-        // draw the pattern
-        const ctx = g_canvas.getContext("2d");
-        ctx.fillStyle = "white";
-        ctx.fillRect(0, 0, g_canvas.width, g_canvas.height);
-        let subCanvas = document.createElement("canvas");
-        subCanvas.width = thumbWidth;
-        subCanvas.height = thumbHeight;
-        subCanvas
-          .getContext("2d")
-          .drawImage(this, 0, 0, subCanvas.width, subCanvas.height);
-        ctx.fillStyle = ctx.createPattern(subCanvas, "repeat");
-        ctx.translate(gapX / 2, gapY / 2);
-        ctx.fillRect(0, 0, thumbWidth * numThumbsX, thumbHeight * numThumbsY);
-
-        document.getElementById("result-img").src = g_canvas.toDataURL();
-        showLoading(false);
-      };
-      image.src = g_canvas.toDataURL();
-    }
+    let canvas = g_compositeCanvas;
+    let rootRect = buildRects();
+    let renderedPageData = drawToCanvas(canvas, rootRect);
+    fitCanvasContentToLayout(canvas, renderedPageData, () => {
+      updatePreviewImage();
+      showLoading(false);
+    });
   }, "100");
 }
 
-function drawCanvas(makeDoublePage) {
+export function renderLayers(onFinish) {
+  let canvas = g_compositeCanvas;
+  let rootRect = buildRects();
+  let renderedPageData0 = drawToCanvas(canvas, rootRect);
+  renderedPageData0.layerCanvases = [];
+  fitCanvasContentToLayout(canvas, renderedPageData0, () => {
+    updatePreviewImage();
+    // layer 1 - background
+    let layerCanvas1 = document.createElement("canvas");
+    let renderedPageData1 = drawToCanvas(layerCanvas1, rootRect, [1]);
+    renderedPageData1.layerCanvases = renderedPageData0.layerCanvases;
+    fitCanvasContentToLayout(layerCanvas1, renderedPageData1, () => {
+      renderedPageData1.layerCanvases.push({
+        canvas: layerCanvas1,
+        name: "paper",
+      });
+      // layer 2 - safe, trim, bleed, crop, header..
+      let layerCanvas2 = document.createElement("canvas");
+      let renderedPageData2 = drawToCanvas(layerCanvas2, rootRect, [2]);
+      renderedPageData2.layerCanvases = renderedPageData1.layerCanvases;
+      fitCanvasContentToLayout(layerCanvas2, renderedPageData2, () => {
+        renderedPageData2.layerCanvases.push({
+          canvas: layerCanvas2,
+          name: "printing areas",
+        });
+        // layer 3 - panel guides
+        let layerCanvas3 = document.createElement("canvas");
+        let renderedPageData3 = drawToCanvas(layerCanvas3, rootRect, [3]);
+        renderedPageData3.layerCanvases = renderedPageData2.layerCanvases;
+        fitCanvasContentToLayout(layerCanvas3, renderedPageData3, () => {
+          renderedPageData3.layerCanvases.push({
+            canvas: layerCanvas3,
+            name: "panel guides",
+          });
+          // layer 4 - panel grid
+          let layerCanvas4 = document.createElement("canvas");
+          let renderedPageData4 = drawToCanvas(layerCanvas4, rootRect, [4]);
+          renderedPageData4.layerCanvases = renderedPageData3.layerCanvases;
+          fitCanvasContentToLayout(layerCanvas4, renderedPageData4, () => {
+            renderedPageData4.layerCanvases.push({
+              canvas: layerCanvas4,
+              name: "panel grid",
+            });
+            // send all canvases
+            onFinish(renderedPageData4);
+          });
+        });
+      });
+    });
+  });
+}
+
+function buildRects() {
   const ppi = document.getElementById("ppi-input").value;
   const toInches =
     document.getElementById("units-select").value === "inches" ? 1 : 1 / 2.54;
+
+  const makeDoublePage =
+    document.getElementById("layout-spread-select").value === "double"
+      ? true
+      : false;
 
   const lineWidthThin =
     document.getElementById("line-width-thin-input").value * toInches;
@@ -183,9 +137,6 @@ function drawCanvas(makeDoublePage) {
   const headerPaddingLeft =
     document.getElementById("header-padding-left-input").value * toInches;
 
-  const backGroundColor = document.getElementById(
-    "background-color-input"
-  ).value;
   const lineColor = document.getElementById("line-color-input").value;
   const lineWidthMultiplier = document.getElementById(
     "line-thickness-select"
@@ -197,9 +148,6 @@ function drawCanvas(makeDoublePage) {
     "header-text-weight-select"
   ).value;
 
-  const drawBackground = document.getElementById(
-    "paper-draw-bg-checkbox"
-  ).checked;
   const drawHeader = document.getElementById(
     "paper-draw-header-checkbox"
   ).checked;
@@ -362,12 +310,137 @@ function drawCanvas(makeDoublePage) {
     trimRect.addChild(safeRect_1);
   }
 
-  g_canvas.width = headerRect.getSize().width * ppi;
-  g_canvas.height = headerRect.getSize().height * ppi;
-  const ctx = g_canvas.getContext("2d");
-  ctx.fillStyle = drawBackground ? backGroundColor : "rgba(0, 0, 0, 0)";
-  ctx.fillRect(0, 0, g_canvas.width, g_canvas.height);
-  headerRect.draw(ctx, true);
+  return headerRect;
+}
 
-  return { ppi: ppi, width: g_canvas.width, height: g_canvas.height };
+function drawToCanvas(canvas, rootRect, layers = [0]) {
+  const ppi = document.getElementById("ppi-input").value;
+  const drawBackground = document.getElementById(
+    "paper-draw-bg-checkbox"
+  ).checked;
+  let backGroundColor = document.getElementById("background-color-input").value;
+
+  canvas.width = rootRect.getSize().width * ppi;
+  canvas.height = rootRect.getSize().height * ppi;
+  const ctx = canvas.getContext("2d");
+  if ((layers.includes(0) || layers.includes(1)) && drawBackground) {
+    backGroundColor = backGroundColor;
+  } else {
+    backGroundColor = "rgba(0, 0, 0, 0)";
+  }
+  ctx.fillStyle = backGroundColor;
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  rootRect.draw(ctx, layers, true);
+
+  return {
+    ppi: ppi,
+    width: canvas.width,
+    height: canvas.height,
+    backGroundColor: backGroundColor,
+  };
+}
+
+function fitCanvasContentToLayout(canvas, renderedPageData, onFinished) {
+  if (document.getElementById("layout-template-select").value === "page") {
+    if (
+      document.getElementById("layout-page-paper-select").value === "header"
+    ) {
+      // paper size = header area size
+      if (onFinished) onFinished();
+    } else {
+      // a4 210 mm x 297 mm
+      let paperWidth = 8.27;
+      let paperHeight = 11.69;
+      if (document.getElementById("layout-page-paper-select").value === "us") {
+        paperWidth = 8.5;
+        paperHeight = 11;
+      } else if (
+        document.getElementById("layout-page-paper-select").value === "b4"
+      ) {
+        paperWidth = 10.12;
+        paperHeight = 14.33;
+      } //257 x 364 mm
+      else if (
+        document.getElementById("layout-page-paper-select").value === "11x17"
+      ) {
+        paperWidth = 11;
+        paperHeight = 17;
+      }
+      let image = new Image();
+      image.onload = function () {
+        canvas.width = paperWidth * renderedPageData.ppi;
+        canvas.height = paperHeight * renderedPageData.ppi;
+        const doScale =
+          document.getElementById("layout-page-scaling-select").value ===
+          "scale"
+            ? true
+            : false;
+        let pageWidth = renderedPageData.width;
+        let pageHeight = renderedPageData.height;
+        if (doScale) {
+          const widthRatio = canvas.width / pageWidth;
+          const heightRatio = canvas.height / pageHeight;
+          const ratio = widthRatio < heightRatio ? widthRatio : heightRatio;
+          pageWidth = ratio * pageWidth;
+          pageHeight = ratio * pageHeight;
+        }
+        const gapX = canvas.width - pageWidth;
+        const gapY = canvas.height - pageHeight;
+        // draw the image
+        const ctx = canvas.getContext("2d");
+        ctx.fillStyle = renderedPageData.backGroundColor;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(this, gapX / 2, gapY / 2, pageWidth, pageHeight);
+
+        if (onFinished) onFinished();
+      };
+      image.src = canvas.toDataURL();
+    }
+  } else {
+    let paperWidth = 8.3;
+    let paperHeight = 11.7;
+    if (
+      document.getElementById("layout-thumbnails-paper-select").value === "us"
+    ) {
+      paperWidth = 8.5;
+      paperHeight = 11;
+    }
+    const numThumbsX = document.getElementById(
+      "layout-thumbnails-columns-input"
+    ).value;
+    const numThumbsY = document.getElementById(
+      "layout-thumbnails-rows-input"
+    ).value;
+    let image = new Image();
+    image.onload = function () {
+      canvas.width = paperWidth * renderedPageData.ppi;
+      canvas.height = paperHeight * renderedPageData.ppi;
+      const pageWidth = renderedPageData.width;
+      const pageHeight = renderedPageData.height;
+      const thumbWidthRatio = canvas.width / numThumbsX / pageWidth;
+      const thumbHeightRatio = canvas.height / numThumbsY / pageHeight;
+      const thumbRatio =
+        thumbWidthRatio < thumbHeightRatio ? thumbWidthRatio : thumbHeightRatio;
+      const thumbWidth = thumbRatio * pageWidth;
+      const thumbHeight = thumbRatio * pageHeight;
+      const gapX = canvas.width - thumbWidth * numThumbsX;
+      const gapY = canvas.height - thumbHeight * numThumbsY;
+      // draw the pattern
+      const ctx = canvas.getContext("2d");
+      ctx.fillStyle = renderedPageData.backGroundColor;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      let subCanvas = document.createElement("canvas");
+      subCanvas.width = thumbWidth;
+      subCanvas.height = thumbHeight;
+      subCanvas
+        .getContext("2d")
+        .drawImage(this, 0, 0, subCanvas.width, subCanvas.height);
+      ctx.fillStyle = ctx.createPattern(subCanvas, "repeat");
+      ctx.translate(gapX / 2, gapY / 2);
+      ctx.fillRect(0, 0, thumbWidth * numThumbsX, thumbHeight * numThumbsY);
+
+      if (onFinished) onFinished();
+    };
+    image.src = canvas.toDataURL();
+  }
 }
