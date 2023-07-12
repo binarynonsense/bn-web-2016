@@ -12,7 +12,7 @@ import { initView, resetView } from "./view.js";
 import { initPanels } from "./panels.js";
 import { initModals } from "./modals.js";
 
-const g_version = "1.1.0";
+const g_version = "1.2.0";
 
 init();
 
@@ -114,3 +114,17 @@ function initBase() {
     });
   }
 }
+
+document.onkeydown = function (event) {
+  if (window.bridge) {
+    // electron
+    if (
+      event.ctrlKey &&
+      event.shiftKey &&
+      (event.key == "i" || event.key == "I")
+    ) {
+      event.preventDefault();
+      window.bridge.toggleDevTools();
+    }
+  }
+};
