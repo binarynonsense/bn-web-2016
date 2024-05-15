@@ -41,12 +41,16 @@ async function generateSummary(repoOwner, repoName) {
       let repoUrl = `https://github.com/${repoOwner}/${repoName}`;
       const releases = await fetchReleasesData(repoOwner, repoName, 50);
       if (releases && releases.length > 0) {
+        let hasTotalDownloads = false;
         let totalDownloads = 0;
         let numberReleases = 0;
         let latestRelease;
         let latestStableRelease;
         releases.forEach((data) => {
           numberReleases++;
+          if (data.has_total_downloads) {
+            hasTotalDownloads = true;
+          }
           totalDownloads += data.total_downloads;
           if (!latestRelease) {
             latestRelease = data;
@@ -61,7 +65,11 @@ async function generateSummary(repoOwner, repoName) {
         // general info
         summaryDiv.appendChild(getSectionTitleDiv("Releases Summary:"));
         summaryDiv.appendChild(
-          getGeneralInfoDiv(repoUrl, numberReleases, totalDownloads)
+          getGeneralInfoDiv(
+            repoUrl,
+            numberReleases,
+            hasTotalDownloads ? totalDownloads : -1
+          )
         );
         // latest release
         if (latestRelease) {
@@ -102,9 +110,10 @@ function getGeneralInfoDiv(repoUrl, numberReleases, totalDownloads) {
   div.id = "info-div";
   let innerHTML = "<div class='info-body'>";
   innerHTML += "<ul>";
-  innerHTML += `<li>Url: <a href="${repoUrl}/releases">${repoUrl}/releases</a></li>`;
+  innerHTML += `<li>URL: <a href="${repoUrl}/releases">${repoUrl}/releases</a></li>`;
   innerHTML += `<li>Number of Releases: ${numberReleases}</li>`;
-  innerHTML += `<li>Total Downloads: <b>${totalDownloads}</b></li>`;
+  if (totalDownloads >= 0)
+    innerHTML += `<li>Total File Downloads: <b>${totalDownloads}</b></li>`;
   innerHTML += "</ul>";
   innerHTML += "</div>";
   div.innerHTML += innerHTML;
@@ -131,10 +140,17 @@ function getReleaseInfoDiv(data, collapsed = false) {
   let date = new Date(data.published_at);
   innerHTML += `<li>Date: ${date.toLocaleString()}</li>`;
   innerHTML += `<li>Tag: ${data.tag_name}</li>`;
-  innerHTML += `<li>Url: <a href="${data.html_url}">${data.html_url}</a></li>`;
-  innerHTML += `<li>Downloads: ${data.total_downloads}</li>`;
+  innerHTML += `<li>URL: <a href="${data.html_url}">${data.html_url}</a></li>`;
+  {
+    innerHTML += `<li>Source Code:`;
+    innerHTML += "<ul>";
+    innerHTML += `<li><a href="${data.zipball_url}">zip</a></li>`;
+    innerHTML += `<li><a href="${data.tarball_url}">tar.gz</a></li>`;
+    innerHTML += "</ul>";
+    innerHTML += `</li>`;
+  }
   if (data.assets.length > 0) {
-    innerHTML += `<li>Files:`;
+    innerHTML += `<li>Files (${data.total_downloads} downloads):`;
     innerHTML += "<ul>";
     data.assets.forEach((file) => {
       innerHTML += `<li><a href="${file.browser_download_url}">${
@@ -185,11 +201,14 @@ async function fetchReleasesData(repoOwner, repoName, perPage) {
         console.log("raw releases data:");
         console.log(response);
         response.data.forEach((releaseData) => {
+          releaseData.has_total_downloads = false;
           releaseData.total_downloads = 0;
           if (releaseData.assets) {
             releaseData.assets.forEach((element) => {
-              if (element.download_count)
+              if (element.download_count) {
+                releaseData.has_total_downloads = true;
                 releaseData.total_downloads += element.download_count;
+              }
             });
           }
           releases.push(releaseData);
