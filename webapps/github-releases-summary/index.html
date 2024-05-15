@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Github Releases Summary</title>
+    <meta
+      name="description"
+      content="A webpage that generates a summary of a GitHub repository's releases from its url."
+    />
+    <meta name="keywords" content="github,releases, summary" />
+    <meta name="author" content="Álvaro García www.binarynonsense.com" />
+    <meta name="copyright" content="Álvaro García www.binarynonsense.com" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/loading.css" />
+  </head>
+  <body>
+    <noscript> <p>This website requires JavaScript to work.</p></noscript>
+    <div id="content-div">
+      <div class="section-name"><span>Repository:</span></div>
+      <div id="repo-div">
+        <div id="repo-url-div">
+          <span>github.com</span><span>/</span>
+          <input id="repo-owner-input" type="text" /><span>/</span
+          ><input id="repo-name-input" type="text" />
+        </div>
+        <div id="repo-generate-div">
+          <button id="repo-generate-button">Generate Summary</button>
+        </div>
+      </div>
+      <div id="summary-div"></div>
+      <!-- loading -->
+      <div id="loading">
+        <div id="loading-bg"><div id="loading-spinner"></div></div>
+      </div>
+    </div>
+    <div id="footer">
+      <i
+        >Github Releases Summary - Made by Álvaro García (<a
+          href="http://www.binarynonsense.com"
+          >www.binarynonsense.com</a
+        >)</i
+      >
+    </div>
+    <script src="./js/main.js" type="module"></script>
+  </body>
+</html>
