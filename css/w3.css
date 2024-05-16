@@ -1108,6 +1108,10 @@ a {
 }
 .w3-justify {
   text-align: justify !important;
+  /* AL */
+  hyphens: auto !important;
+  -webkit-hyphens: auto !important;
+  -moz-hyphens: auto !important;
 }
 .w3-center {
   text-align: center !important;
